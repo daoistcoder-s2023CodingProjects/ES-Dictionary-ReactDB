@@ -11,3 +11,5 @@ let arrow = document.querySelectorAll(".arrow");
   sidebarBtn.addEventListener("click", ()=>{
     sidebar.classList.toggle("close");
   });
+
+  
