@@ -312,7 +312,8 @@
 
 .home-section {
     position: relative;
-    background: #fbbcbc;
+    background-image: url('../images/background-1.jpg');
+    background-size: cover;
     height: 100vh;
     left: 260px;
     width: calc(100% - 260px);
@@ -332,7 +333,7 @@
 
 .home-section .home-content .bx-menu,
 .home-section .home-content .text {
-    color: #000000;
+    color: #fffefe;
     font-size: 35px;
 }
 
@@ -381,7 +382,7 @@
 }
 
 .container {
-    background-color: #ffffff;
+    background-color: #ffffffec;
     position: relative;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -438,7 +439,7 @@
 .result .details {
     display: flex;
     gap: 10px;
-    color: #b3b6d4;
+    color: #2b2b2c;
     margin: 5px 0 20px 0;
     font-size: 14px;
 }
