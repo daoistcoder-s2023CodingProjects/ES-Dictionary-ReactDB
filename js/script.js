@@ -1,3 +1,5 @@
+// Dictionary API
+
 const url = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 const result = document.getElementById("result");
 const sound = document.getElementById("sound");
@@ -13,7 +15,7 @@ btn.addEventListener("click", () => {
             <div class="word">
                     <h3>${inpWord}</h3>
                     <button onclick="playSound()">
-                        <i class="fas fa-volume-up"></i>
+                        <i class="fa-solid fa-volume-up"></i>
                     </button>
                 </div>
                 <div class="details">

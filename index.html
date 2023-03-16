@@ -1,129 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES Dictionary</title>
 
-    <!-- Link CSS File -->
+    <!-- GP2 Framework -->
+    <link rel="stylesheet" href="gp2-framework/framework.css">
+
+    <!-- Custom CSS -->
+
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- GP2 Framework CSS File -->
-    <link rel="stylesheet" href="gp2-framework/framework.css">
-    <title> ES Dictionary Website </title>
-
-    <!-- Font-awesome kit offline -->
-
+    <!-- Font Awesome Offline -->
     <script src="js/Font-awesome-kit/Font-awesome.js"></script>
 </head>
-
 <body>
 
-    <div id="full">
+    <!---- Navbar Section Begins -->
+    <section id="navbar">
+        <header>
 
-        <!-- Navbar Section begins -->
-
-        <div id="nav-div">
-            <header>
-
-                <img class="logo" src="images/logo.png" alt="Coffee Picture">
+            <!-- Navbar -->
+            <div class="nav-container">
                 <nav>
-                    <ul class="nav-links">
-                        <li><a><i class="fa-solid fa-moon"></i> Dark Mode</a></li>
-                        <li><a href="#" class="contact-btn"><button>Contact</button></a></li>
-                    </ul>
-                    <a href="#"><i id="burger-btn" class="fa-solid fa-bars"></i></a>
-                </nav>
-            </header>
-            <div class="left-sidebar">
-                <h3>Links</h3>
-                <ul>
-                    <li><a class="links" href="#"><i class="fa-solid fa-download"></i> Saved History</a></li>
-                    <li><a class="links" href="#">Recent Searches</a></li>
-                    <li><a class="links" href="#">Comments</a></li>
-                </ul>
-            </div>
-
-
-
-
-        </div>
-
-
-        <!-- Navbar Section Ends -->
-        <!---------------------------------------------------->
-
-        <!-- Main  Section begins -->
-        <main>
-
-            <div id="body-area">
-                <div class="grid-items"><i class="fa-solid fa-plus"></i> Dictionary Menu </div>
-
-
-                <div class="grid-container">
-                    <div class="grid-items"><i class="fa-solid fa-plus"></i> Add Word </div>
-                    <div class="grid-items"><i class="fa-solid fa-pen-to-square"></i> Update Word</div>
-                    <div class="grid-items"><i class="fa-solid fa-trash"></i> Delete Word </div>
-                    <div class="grid-items"><i class="fa-solid fa-magnifying-glass"></i> Search Word </div>
-                </div>
-
-                <div class="grid-container-2">
-                    <div class="grid-items">
-                        <div class="search-box">
-                            <input type="text" placeholder=" Type the word here.." id="inp-word" />
-                            <button id="search-btn">Search</button>
+                    <div class="nav-box">
+                        <div class="img-nav">
+                            <div class="logo">
+                                <img src="images/logo.png">
+                            </div>
+                            <div class="logo">
+                                <h3>ES Dictionary</h3>
+                            </div>
+                        </div>
+                        <div class="nav-links">
+                            <ul>
+                                <li><a><i class="fa-solid fa-moon"></i> Darkmode</a></li>
+                                <li><button type="submit" class="nav-btn">Contact</button></li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="grid-items grid-term">
-                        <audio id="sound"></audio>
-                        <div class="container"></div>
-                        <div class="result" id="result"></div>
+                </nav>
+            </div>
+
+            <!-- Sidebar -->
+
+            <div class="sidebar">
+                <div class="sidebar-container">
+
+                    <!-- Recent Search box -->
+                    <div class="sidebar-box">
+                        <h2> Recent Search </h2>
+                        <div class="divider"></div>
+                        <ul>
+                            <li> item 1</li>
+                            <li> item 2</li>
+                            <li> item 3</li>
+                            <li> item 4</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Word of the day box -->
+                    <div class="sidebar-box">
+                        <h2> Words of the Day </h2>
+                        <div class="divider"></div>
+                        <ul>
+                            <li> item 1</li>
+                            <li> item 2</li>
+                            <li> item 3</li>
+                            <li> item 4</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-box">
+                        <h2> Comments </h2>
+                        <div class="divider"></div>
+                        <ul>
+                            <li> item 1</li>
+                            <li> item 2</li>
+                            <li> item 3</li>
+                            <li> item 4</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-    </div>
+        </header>
+    </section>
 
-    </main>
-    <!-- Main Section Ends -->
+    <!---- Navbar Section Ends -->
 
-    <!---------------------------------------------------->
+    <!-- Body Area Section Begins -->
+    <section id="body-area">
 
-    <!-- Footer Section begins -->
+    </section>
+
+    <!-- Body Area Section Ends -->
+
+    <!-- Footer Section Begins -->
 
     <section id="footer">
-        <footer>
-            <div class="footer-list">
-                <div class="list-item-box">
-                    <h2>GP2 - Team Collaborators</h2>
-                    <ul class="footer-links">
-                        <li>Agaspar</li>
-                        <li>Jerome</li>
-                        <li>Ryan Ayo</li>
-                        <li>Bernard</li>
-                        <li>Waren</li>
-                    </ul>
-                </div>
-
-                <div class="list-item-box-2">
-                    <div class="subscribe">
-                        <h2>Contact Us</h2>
-                        <input type="email" placeholder=" Subscribe " name="" id="">
-                        <a class="subscribe-btn"><i class="fa-solid fa-envelope"></i> Subscribe</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="copyright"><span>&copy; ES Dictionary 2023 &trade;</span></div>
-            </div>
-        </footer>
+        
     </section>
     <!-- Footer Section Ends -->
-
-    <!-- JS Files -->
-
-    <script src="js/script.js"></script>
-    </div>
+    
 </body>
-
 </html>
