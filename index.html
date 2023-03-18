@@ -7,20 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ES Dictionary</title>
 
-    <!-- GP2 Framework -->
-    <link rel="stylesheet" href="gp2-framework/framework.css">
-
-    <!-- Custom CSS -->
-
-    <link rel="stylesheet" href="css/styles.css">
-
-    <!-- Boxicons Online -->
-
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-
-    <!-- Font Awesome Offline -->
-    <script src="js/Font-awesome-kit/Font-awesome.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 
     <script src="js/script.js"></script>
 </head>
@@ -28,34 +15,12 @@
 <body>
 
     <!---- Navbar Section Begins -->
-    <section id="navbar">
-        <header>
+    <header>
+        <!-- Navbar -->
 
-            <!-- Navbar -->
-            <div class="nav-container">
-                <nav>
-                    <div class="nav-box">
-                        <div class="img-nav">
-                            <div class="logo">
-                                <img src="images/logo.png">
-                            </div>
-                            <div class="logo">
-                                <h3>ES Dictionary</h3>
-                            </div>
-                        </div>
-                        <div class="nav-links">
-                            <ul>
-                                <li><a class="list"><i class="fa-solid fa-moon"></i> Darkmode</a></li>
-                                <li><a class="list"><button type="submit" class="nav-btn">Contact</button></a></li>
-                                <li class="menu-btn"><a><i class="fa-solid fa-bars"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </div>
+        <section id="nav-sidebar">
 
             <!-- Sidebar -->
-
 
             <div class="sidebar close">
                 <div class="logo-details">
@@ -82,9 +47,9 @@
                         </div>
                         <ul class="sub-menu">
                             <li><a class="link_name" href="#">Category</a></li>
-                            <li><a href="#"><i class='bx bx-edit-alt'></i> Edit Word</a></li>
-                            <li><a href="#">Edit Delete</a></li>
-                            <li><a href="#">Edit Modify</a></li>
+                            <li><a href="#"> Edit Word</a></li>
+                            <li><a href="#"> Edit Delete</a></li>
+                            <li><a href="#"> Edit Modify</a></li>
                         </ul>
                     </li>
                     <li>
@@ -98,7 +63,11 @@
                         <ul class="sub-menu">
                             <li><a class="link_name" href="#">Posts</a></li>
                             <li><a href="#">Login</a></li>
-                            <li><a href="#">Word of the day</a></li>
+                            <li><a class="posts" href="#">Word of the day</a>
+                                <ul class="sub-menu">
+                                    <li> <a>Cat </a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
 
@@ -159,57 +128,109 @@
             </div>
             <section class="home-section">
                 <div class="home-content">
-                    <i class='bx bx-menu'></i>
+                    <div class="menu-box">
+                        <i class='bx bx-menu'></i>
+                    </div>
                 </div>
-
-                <!-- Body Area Section Begins -->
                 <section id="body-area">
-                    <div class="menu-list">
-                        <div class="menu-box">
-                            <a><i class='bx bx-list-plus'></i> Add Word</a>
+
+                    <!-- Navbar Container -->
+                    <div id="navbar">
+
+                        <div class="img-nav">
+                            <div class="logo-item">
+                                <img class="logo" src="images/logo.png">
+                            </div>
+                            <div class="logo-item">
+                                <h3>ES Dictionary</h3>
+                            </div>
                         </div>
-                        <div class="menu-box">
-                            <a><i class='bx bxs-trash-alt'></i> Delete Word</a>
+                        <nav>
+                            <div class="nav-links">
+                                <ul>
+                                    <li><a class="list dark-mode"><i class="bx bx-moon"></i> Darkmode</a></li>
+                                    <li><a class="list"><button type="submit" class="nav-btn">Contact</button></a></li>
+                                    <li class="menu-btn"><a><i class="fa-solid fa-bars"></i></a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="body-box">
+                        <div class="menu-list">
+                            <div class="menu-box">
+                                <a><i class='bx bx-list-plus'></i> Add Word</a>
+                            </div>
+                            <div class="menu-box">
+                                <a><i class='bx bxs-trash-alt'></i> Delete Word</a>
+                            </div>
+                            <div class="menu-box">
+                                <a><i class='bx bxs-brush-alt'></i> Clear History</a>
+                            </div>
                         </div>
-                        <div class="menu-box">
-                            <a><i class='bx bxs-brush-alt'></i> Clear History</a>
+
+                        <div class="search-container">
+
+                            <div class="search-box">
+                                <input type="text" placeholder="Type the word here.." id="inp-word" />
+                                <button class="search-btn" id="search-btn" onclick="dictionary()">Search</button>
+                            </div>
+                            <div class="result-boxes">
+                                <div class="container">
+                                    <audio id="sound"></audio>
+                                    <div class="result" id="result"></div>
+                                    <img class="img-result" src="images/background-2.jpg">
+                                </div>
+                                <div class="container-2">
+                                    
+                                    <div class="history" id="history">
+                                        <h2>History</h2>
+                                        <ul id="history-list">
+                                            <li> Item 1</li>
+                                            <li> Item 2</li>
+                                            <li> Item 3</li>
+                                            <li> Item 4</li>
+                                            <li> Item 5</li>
+                                            <li> Item 6</li>
+                                            <li> Item 7</li>
+                                            <li> Item 8</li>
+                                            <li> Item 9</li>
+                                            <li> Item 10</li>
+                                        </ul>
+                                    </div>
+                                    <div class="history" id="searches">
+                                        <h2>Recent</h2>
+                                        <ul id="search-list">
+                                            <li> Item 1</li>
+                                            <li> Item 2</li>
+                                            <li> Item 3</li>
+                                            <li> Item 4</li>
+                                            <li> Item 5</li>
+                                            <li> Item 6</li>
+                                            <li> Item 7</li>
+                                            <li> Item 8</li>
+                                            <li> Item 9</li>
+                                            <li> Item 10</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="search-container">
-                        
-                        <div class="search-box">
-                            <input type="text" placeholder="Type the word here.." id="inp-word" />
-                            <button id="search-btn" onclick="dictionary()">Search</button>
-                        </div>
-                        <div class="container">
-                            <audio id="sound"></audio>
-                            <div class="result" id="result"></div>
-                        </div>
-                    </div>
-                    </div>
-
-
 
                     <!-- Body Area Section Ends -->
 
-                    <!-- Footer Section Begins -->
-
-                    <section id="footer">
-
-                    </section>
-                    <!-- Footer Section Ends -->
                 </section>
             </section>
+        </section>
 
-
-
-        </header>
+    </header>
     </section>
 
-    <script src="js/script.js"></script>
+    <script src="js/api.js"></script>
     <script src="js/sidebar.js"></script>
     <!---- Navbar Section Ends -->
+    </section>
+    <!-- Body Area Section Begins -->
 
 </body>
 
