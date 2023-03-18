@@ -1,0 +1,13 @@
+
+/* Main CSS */
+@import url('main-css/nav.css'); /* Navigation Bar Properties*/
+@import url('main-css/sidebar.css'); /* Sidebar Properties */
+@import url('main-css/body-area.css'); /* Body Area Properties */
+
+/* Media CSS */
+@import url('mobile/tablet.css'); /* 800px above */
+@import url('mobile/mobile.css'); /* 600px below */
+
+/* Universal CSS */
+
+@import url('universal.css');
