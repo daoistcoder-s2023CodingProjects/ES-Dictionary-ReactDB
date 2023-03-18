@@ -12,12 +12,12 @@
 #navbar .img-nav {
     display: flex;
     align-items: center;
-    color: white;
 }
 
 #navbar .img-nav .logo-item {
     padding: 5px 5px;
     font-weight: 100;
+    color: white;
 }
 
 #navbar .img-nav .logo-item .logo {

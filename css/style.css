@@ -8,6 +8,10 @@
 @import url('mobile/tablet.css'); /* 800px above */
 @import url('mobile/mobile.css'); /* 600px below */
 
+/* Darkmode CSS */
+
+@import url('main-css/darkmode.css');
+
 /* Universal CSS */
 
 @import url('universal.css');

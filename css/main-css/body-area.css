@@ -29,10 +29,41 @@
     background-color: var(--bg-light-brown-2);
 }
 
+#body-area .menu-list .menu-box:hover {
+    background-color: #ddc683;
+    box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.75);
+    transition: 0.9s;
+    cursor: pointer;
+}
+
 .search-container {
     display: grid;
     grid-template-columns: repeat(1,auto);
     margin-top: 0px 20px 0 20px;
+}
+
+.search-container .search-box input[type=text] {
+    border-radius: 10px;
+    color:rgb(30, 30, 31);
+    font-weight: 500;
+}
+
+
+.search-container .search-box .search-btn {
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+} 
+
+.search-container .search-box .search-btn:hover {
+    background-color: #ddc683;
+    box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.75);
+    transition: 0.9s;
+    cursor: pointer;
 }
 
 .result-boxes {
