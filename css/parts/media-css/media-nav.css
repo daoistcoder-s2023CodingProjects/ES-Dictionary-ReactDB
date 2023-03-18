@@ -1,0 +1,13 @@
+@media only screen and (min-width: 601px) {
+
+    /* Navbar begins */
+    #navbar header .nav-container nav .nav-box .nav-links ul .menu-btn {
+        display: none;
+    }
+
+    #navbar header .nav-container nav .nav-box .nav-links ul li .list {
+        display: block;
+    }
+
+    /* Navbar Ends  */
+}
