@@ -1,7 +1,9 @@
 #body-area {
     background-image: url('../../images/background.jpg');
-    height: 110vh;
-    background-size: cover;
+    width: 100%;
+    height: max-content;
+    background-size: 200% auto;
+    background-repeat: no-repeat;
     
 }
 
@@ -9,6 +11,7 @@
     margin:20px;
     margin-top: 0px;
     padding: 20px;
+    margin-bottom: 0;
 }
 
 #body-area .menu-list {

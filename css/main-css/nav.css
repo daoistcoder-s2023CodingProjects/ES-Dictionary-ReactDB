@@ -51,6 +51,13 @@
     transition: 0.5s;
 }
 
+#navbar nav .nav-links .menu-btn {
+    color: white;
+    background-color: rgb(53, 52, 52);
+    border-radius: 10px;
+    display: none;
+}
+
 
 
 
