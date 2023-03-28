@@ -6,7 +6,6 @@ let contentarea = document.querySelector('#content-area');
 toggle.onclick = function () {
     nav.classList.toggle('active');
     contentarea.classList.toggle('active');
-    this.className.toggle('close-outline')
 }
 
 let list = document.querySelectorAll('#fixed-sidebar li');
