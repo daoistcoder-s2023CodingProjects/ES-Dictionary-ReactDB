@@ -46,6 +46,7 @@ function handleSearch() {
       document.getElementById('definition').innerHTML = definition;
       document.getElementById('part-of-speech').innerHTML = partOfSpeech;
       document.getElementById('thisword').innerHTML = phonetic;
+      document.getElementById('title').innerHTML = searchQuery;
 
 
 
