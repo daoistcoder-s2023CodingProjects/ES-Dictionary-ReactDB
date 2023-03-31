@@ -1,3 +1,26 @@
+let toggle = document.querySelector('.toggle');
+let nav = document.querySelector('#fixed-sidebar');
+let contentarea = document.querySelector('#content-area');
+
+toggle.onclick = function () {
+  nav.classList.toggle('active');
+  contentarea.classList.toggle('active');
+}
+
+let list = document.querySelectorAll('#fixed-sidebar li');
+
+function linkactive() {
+  list.forEach((item) =>
+    item.classList.remove('hovered'));
+  this.classList.add('hovered');
+}
+
+list.forEach((item) =>
+  item.addEventListener('mouseover', linkactive));
+
+
+
+
 // // My Prototype Syntax - Waren Gador
 
 const dictionaryApiKey = '98a198a3-a200-490a-ad48-98ac95b46d80';
@@ -16,12 +39,36 @@ function handleSearch() {
     .then(data => {
       const definition = data[0].shortdef[0];
       const partOfSpeech = data[0].fl;
-      const aword = data[0].hwi.prs[0].mw;
-      const sounds = hwi.prs[0].sound.audio;
+      const phonetic = data[0].hwi.prs[0].mw;
+
+      // Make data appear on the screen
+      const audio_box = document.getElementById('audio');
       document.getElementById('definition').innerHTML = definition;
       document.getElementById('part-of-speech').innerHTML = partOfSpeech;
-      document.getElementById('thisword').innerHTML = aword;
-      document.getElementById('audios').innerHTML = sounds;
+      document.getElementById('thisword').innerHTML = phonetic;
+
+
+
+      // Make a history of search box
+
+      audio_box.innerHTML = "";
+
+      // if audio is available
+      let sound_name = data[0].hwi.prs[0].sound.audio;
+      if (sound_name) {
+        soundRead(sound_name);
+      }
+
+      function soundRead(sound_name) {
+        let sub_folder = sound_name.charAt(0);
+        let sound_src = `https://media.merriam-webster.com/soundc11/${sub_folder}/${sound_name}.wav?key=${dictionaryApiKey}`;
+
+        let aud = document.createElement('audio');
+        aud.src = sound_src;
+        aud.controls = true;
+        audio_box.appendChild(aud)
+      }
+
     });
 
   fetch(`https://api.pexels.com/v1/search?query=${searchQuery}`, {

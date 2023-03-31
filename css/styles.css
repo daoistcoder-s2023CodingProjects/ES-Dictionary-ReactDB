@@ -307,6 +307,7 @@ ul {
     align-content: center;
     justify-content: center;
     text-align: center;
+    flex-direction: column;
 }
 
 .dictionary-box .left-content .property {
@@ -325,6 +326,10 @@ ul {
 
 }
 
+.dictionary-box .right-content {
+    flex-direction: column;
+}
+
 .dictionary-box .right-content .property {
     display: flex;
     gap: 20px;
@@ -333,7 +338,7 @@ ul {
     column-gap: 3rem;
 }
 
-.dictionary-box .right-content .dic-right audio {
+.dictionary-box .right-content #audio audio {
     border-radius: 50px;
 }
 
