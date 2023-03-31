@@ -6,19 +6,28 @@ ES Dictionary
 ## **Group:**
 Group 2
 
+## **Features**
+
+1. Search Different Words
+2. Play word pronunciation
+3. With image of the desire search
+4. Weather indicator
+5. Can use with any gadget
+6. Free for all
+
 ## **Description**
 
-ES Dictionary is a Website dictionary that you can use thru Web, Tablet and Phone where you can browse word meaning. This dictionary is easy to use and it is free for all.
+ES Dictionary is a Website dictionary that you can use thru Web, Tablet and Phone where you can browse word meaning with images of your search. Enjoy resources that provides definitions and other information related to words and phrases. Users can search for a particular word by typing it into a search bar. The project include examples of how the word is used in context, its etymology or origin, and voice pronunciations.
 
-Just make an account and log in here [ES Dictionary](insertlinkhere).
+Just visit the our project, just click here: [ES Dictionary](insertlinkhere).
 
-After you log in try our different features like searching word, save and delete word. From our navigation area you can see the history of your past search, settings if you want to adjust, and try reach us via chat support so we can answer your queries.
+Just search a word in <u>Search Word</u> area, then enjoy browsing in ES Dictionary where you can get word meaning in just 1 click.
 
 ## **API**
 
-Dictionary API
-Open Weather API
-Pexel's API
+- Merriam API
+- Open Weather API
+- Pexel's API
 
 ## **Repository**
 
