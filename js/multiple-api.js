@@ -4,7 +4,7 @@ const dictionaryApiKey = '98a198a3-a200-490a-ad48-98ac95b46d80';
 const pexelsApiKey = 'P5QhWewHGb3ek9Mmq362jR0qT6BBSlPMLBg5iKE5RinKC3BblQGafGqA';
 const openWeatherApiKey = '36b90ff89a52d49f85627b18ea50ed81';
 
-const searchButton = document.getElementById('search-button');
+const searchButton = document.getElementById('search-btn');
 searchButton.addEventListener('click', handleSearch);
 
 function handleSearch() {
