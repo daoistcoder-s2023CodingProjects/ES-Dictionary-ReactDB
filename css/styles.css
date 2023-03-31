@@ -285,6 +285,12 @@ ul {
     border-bottom-left-radius: 10px;
 }
 
+.dictionary-box .left-content img {
+    width: 100px;
+    height: 100px;
+}
+
+
 .dictionary-box .right-content {
     width: 100%;
     height: 100%;

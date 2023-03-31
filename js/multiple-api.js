@@ -8,6 +8,7 @@ const searchButton = document.getElementById('search-btn');
 searchButton.addEventListener('click', handleSearch);
 
 function handleSearch() {
+
   const searchQuery = document.getElementById('search-input').value;
 
   fetch(`https://dictionaryapi.com/api/v3/references/collegiate/json/${searchQuery}?key=${dictionaryApiKey}`)
@@ -15,8 +16,12 @@ function handleSearch() {
     .then(data => {
       const definition = data[0].shortdef[0];
       const partOfSpeech = data[0].fl;
+      const aword = data[0].hwi.prs[0].mw;
+      const sounds = hwi.prs[0].sound.audio;
       document.getElementById('definition').innerHTML = definition;
       document.getElementById('part-of-speech').innerHTML = partOfSpeech;
+      document.getElementById('thisword').innerHTML = aword;
+      document.getElementById('audios').innerHTML = sounds;
     });
 
   fetch(`https://api.pexels.com/v1/search?query=${searchQuery}`, {
