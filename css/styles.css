@@ -16,8 +16,8 @@ body {
     min-height: 140vh;
     background-size: cover;
     background-image: url(../images/background.jpg);
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    max-width: 100%;
 }
 
 a {
@@ -270,7 +270,7 @@ ul {
 
 .dictionary-box {
     width: 100%;
-    height: 40%;
+    min-height: 40%;
     backdrop-filter: blur(10px);
     margin-top: 20px;
     border-radius: 10px;
@@ -282,7 +282,8 @@ ul {
 
 .dictionary-box .left-content {
     width: 30%;
-    height: 100%;
+    min-height: 100%;
+    max-height: auto;
     background-color: #525252;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -303,7 +304,7 @@ ul {
     border-bottom-right-radius: 10px;
     display: inline-flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 20px;
 }
 
 .dictionary-box .left-content {
@@ -336,6 +337,8 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px;
+    height: 100%;
 }
 
 .dictionary-box .right-content .top-line {
@@ -343,7 +346,7 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20%;
+    height: 50px;
     width: 100%;
 }
 
@@ -368,6 +371,7 @@ ul {
 .dictionary-box .right-content #audio audio {
     border-radius: 50px;
     background-color: #868686;
+    width: 100%;
 }
 
 .dictionary-box .history {
@@ -381,7 +385,6 @@ ul {
 .dictionary-box .weather-box {
     background-color: #525252;
     width: 30%;
-    height: 100%;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -480,8 +483,14 @@ ul {
 
     .dictionary-box .right-content {
         flex-direction: column;
-        min-height: fit-content;
+        height: auto;
+        width: 100%;
         align-items: center;
+        width: 100%;
+    }
+
+    .dictionary-box .history {
+        width: 100%;
     }
 
     @media only screen and (max-width: 970px){
@@ -622,8 +631,6 @@ ul {
     #footer-area .footer_copyright p{
         font-size: 12px;
 }
-
-
 
 
 @media only screen and (max-width: 550px) {
