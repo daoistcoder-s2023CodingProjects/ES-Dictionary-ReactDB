@@ -510,6 +510,7 @@ ul {
 
     #content-area {
         width: 100%;
+        height: fit-content;
         display: flex;
         align-items: center;
         padding-top:30px;
@@ -591,6 +592,7 @@ ul {
 
     #footer-area{
         height: 29.5rem;
+        
     }
 
     #footer-area .flex-container .flex_box{
@@ -609,8 +611,14 @@ ul {
 
     .dictionary-box .left-content .image-box p{
         color: white;
-
     }
+
+    #footer-area .footer_copyright{
+        border-radius: 0.2rem;
+    }
+
+    #footer-area .footer_copyright p{
+        font-size: 12px;
 }
 
      
