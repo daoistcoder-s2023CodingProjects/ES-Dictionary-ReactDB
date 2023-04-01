@@ -508,7 +508,7 @@ ul {
         transition: .5s;
     }
 
-
+    
 
     #content-area {
         width: 100%;
@@ -581,6 +581,16 @@ ul {
         font-size: 90%;
     }
 
+    .menubar ul li a:hover{
+        background-color: rgb(2, 44, 2);
+        color: #fff;
+
+    }
+
+    .menubar ul li a span{
+        color: white;
+    }
+
     #footer-area{
         height: 29.5rem;
     }
@@ -588,6 +598,20 @@ ul {
     #footer-area .flex-container .flex_box{
      
         padding: 0.5rem;
+    }
+
+    .dictionary-box .right-content {
+        width: 100%;
+    }
+
+    .dictionary-box .history{
+        width: 100%;
+        border-radius: 0.5rem;
+    }
+
+    .dictionary-box .left-content .image-box p{
+        color: white;
+
     }
 }
 
