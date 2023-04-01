@@ -67,3 +67,8 @@ We use Figma for wireframe. HTML, CSS, Javascript for the front-end, For the Bac
 5. Ryan Ayo - Developer on Javascript 
 
 6. Agaspar Latayada - Documentation and Developer on Mobile Version
+
+
+Updates:
+
+Emilio Tubao - trying to git push
