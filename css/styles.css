@@ -13,9 +13,11 @@ html {
 /* Main Parent Element */
 body {
     width: 100%;
-    min-height: 100vh;
+    min-height: 140vh;
     background-size: cover;
-    max-width: 1920px;
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    max-width: 100%;
 }
 
 a {
@@ -147,13 +149,15 @@ ul {
     width: calc(100% - 320px);
     height: 140vh;
     right:0;
-    padding: 0px 5px;
+    padding: 0px 15px 0 15px;
     transition: .5s;
     background-color: #525252bd;
+    margin-right: 5x;
 }
 
 #content-area.active {
     width: calc(100% - 80px);
+    margin-right: 5x;
 }
 
 #fixed-sidebar.active {
