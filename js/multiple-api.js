@@ -98,6 +98,33 @@ function handleSearch() {
   });
 }
 
+//clear selector
+const inputTxt = document.getElementById('search-input');
+
+
+//clear btn 
+const clearBtn = document.getElementById('clearBtn');
+
+clearBtn.addEventListener('click', function(e)  {
+    e.preventDefault();
+    inputTxt.value = "";
+    document.getElementById('audio').innerHTML = '';
+    document.getElementById('definition').innerHTML = '';
+    document.getElementById('part-of-speech').innerHTML = '';
+    document.getElementById('thisword').innerHTML = '';
+    document.getElementById('title').innerHTML = '';
+    document.getElementById('image').remove();
+
+    // leftContent.innerHTML = "cleared";
+
+});
+
+
+
+
+
+
+
 
 // Documentation here 
 
