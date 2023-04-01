@@ -72,3 +72,4 @@ We use Figma for wireframe. HTML, CSS, Javascript for the front-end, For the Bac
 Updates:
 
 Emilio Tubao - trying to git push
+Bernard Opis  - trying to git push
