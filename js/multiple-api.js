@@ -108,7 +108,6 @@ const clearBtn = document.getElementById('clearBtn');
 clearBtn.addEventListener('click', function(e)  {
     e.preventDefault();
     inputTxt.value = "";
-    document.getElementById('phase').innerHTML = '';
     document.getElementById('audio').innerHTML = '';
     document.getElementById('definition').innerHTML = '';
     document.getElementById('part-of-speech').innerHTML = '';
