@@ -14,7 +14,7 @@ html {
 body {
     width: 100%;
     min-height: 140vh;
-    overflow: hidden;
+    /* overflow: hidden; */
     background-image: url(../images/background.jpg);
     background-size: cover;
 }
