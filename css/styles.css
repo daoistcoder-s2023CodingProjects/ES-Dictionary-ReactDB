@@ -622,24 +622,58 @@ ul {
 
 
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 550px) {
 
     .menubar {
         font-size: 90%;
     }
 }
 
-@media only screen and (max-width: 470px) {
-    .menubar {
+
+
+@media only screen and (max-width: 510px) {
+    .menubar{
+        font-size: 85%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .menubar{
         font-size: 80%;
     }
 }
-@media only screen and (max-width: 375px){
-    .menubar {
-        font-size: 11px;
+@media only screen and (max-width: 420px) {
+    .menubar{
+            font-size: 75%;
+        }
     }
-    .image-box{
-        padding-top: 10px;
-    max-width: 100%;
+    @media only screen and (max-width: 400px) {
+        
+        .menubar{
+            font-size: 70%;
+        }    
     }
+    @media only screen and (max-width: 375px){
+        .menubar {
+            font-size: 11px;
+        }
+        .image-box{
+            padding-top: 10px;
+        max-width: 100%;
+        }
+    }
+    
+    @media only screen and (max-width: 370px) {
+        
+        .menubar{
+            font-size: 65%;
+        }    
+}
+
+@media only screen and (max-width: 345px) {
+        
+    .menubar{
+        font-size: 60%;
+    }    
+}
 }
