@@ -619,7 +619,6 @@ ul {
         font-size: 12px;
 }
 
-     
 
 
 
@@ -633,5 +632,14 @@ ul {
 @media only screen and (max-width: 470px) {
     .menubar {
         font-size: 80%;
+    }
+}
+@media only screen and (max-width: 375px){
+    .menubar {
+        font-size: 11px;
+    }
+    .image-box{
+        padding-top: 10px;
+    max-width: 100%;
     }
 }
