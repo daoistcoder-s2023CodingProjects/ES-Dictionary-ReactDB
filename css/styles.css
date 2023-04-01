@@ -483,7 +483,12 @@ ul {
         align-items: center;
     }
 
-
+    @media only screen and (max-width: 970px){
+        #footer-area .flex-container{
+            flex-direction: column;
+        }
+    
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -583,10 +588,7 @@ ul {
 
 @media only screen and (max-width: 800px) {
 
-    #footer-area .flex-container{
 
-        flex-direction: column;
-    }
 
     #footer-area{
         height: 29.5rem;
