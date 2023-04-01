@@ -113,7 +113,7 @@ clearBtn.addEventListener('click', function(e)  {
     document.getElementById('part-of-speech').innerHTML = '';
     document.getElementById('thisword').innerHTML = '';
     document.getElementById('title').innerHTML = '';
-    document.getElementById('image').remove();
+    document.getElementById('image').src= '';
 
     // leftContent.innerHTML = "cleared";
 
