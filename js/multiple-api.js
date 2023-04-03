@@ -27,8 +27,30 @@ const dictionaryApiKey = '98a198a3-a200-490a-ad48-98ac95b46d80';
 const pexelsApiKey = 'P5QhWewHGb3ek9Mmq362jR0qT6BBSlPMLBg5iKE5RinKC3BblQGafGqA';
 const openWeatherApiKey = '36b90ff89a52d49f85627b18ea50ed81';
 
+// Search Button
+
+//Variable for search-btn ID
 const searchButton = document.getElementById('search-btn');
-searchButton.addEventListener('click', handleSearch);
+ 
+//Mouse
+searchButton.addEventListener('click', (ev)=>{
+  handleSearch();
+});
+
+
+//Keyboard Enter Key
+document.addEventListener('keypress', (event)=>{
+  // Variable Declaration for Enter key
+  let keyCode = event.keyCode ? event.keyCode : event.which;
+
+  //Value of enter key is 13
+  if(keyCode === 13) {
+    // call handleSearch function
+    handleSearch();
+  }
+    
+});
+
 
 function handleSearch() {
 
@@ -126,12 +148,6 @@ clearBtn.addEventListener('click', (e) => {
 
 
 
-
-
-
-
-
-
 // Documentation here 
 
 /*
@@ -151,3 +167,8 @@ Reconstruct by. Waren Gador
 
 */
 
+//Old version of Search Button
+
+//const searchButton = document.getElementById('search-btn');
+
+//searchButton.addEventListener('click', handleSearch);
