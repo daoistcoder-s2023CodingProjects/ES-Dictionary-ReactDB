@@ -50,7 +50,17 @@ function handleSearch() {
 
 
 
-      // Make a history of search box
+      // Make a history of search box by ROME
+      const historyList = document.querySelector('.history ul');
+
+      const searchHistory = inputTxt.value;
+         if (searchHistory) {
+           const li = document.createElement('li');
+           li.textContent = searchHistory;
+           historyList.appendChild(li);
+      }
+    
+
 
       audio_box.innerHTML = "";
 
@@ -59,6 +69,7 @@ function handleSearch() {
       if (sound_name) {
         soundRead(sound_name);
       }
+       
 
       function soundRead(sound_name) {
         let sub_folder = sound_name.charAt(0);
@@ -71,6 +82,9 @@ function handleSearch() {
       }
 
     });
+
+
+
 
   fetch(`https://api.pexels.com/v1/search?query=${searchQuery}`, {
     headers: {
@@ -98,12 +112,8 @@ function handleSearch() {
   });
 }
 
-//clear selector
+//clear btn  by ROME
 const inputTxt = document.getElementById('search-input');
-
-
-//clear btn 
-
 const clearBtn = document.getElementById('clearBtn');
 
 clearBtn.addEventListener('click', (e) => {
