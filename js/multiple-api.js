@@ -103,21 +103,17 @@ const inputTxt = document.getElementById('search-input');
 
 
 //clear btn 
+
 const clearBtn = document.getElementById('clearBtn');
 
-clearBtn.addEventListener('click', function(e)  {
-    e.preventDefault();
-    inputTxt.value = "";
-    document.getElementById('audio').innerHTML = '';
-    document.getElementById('definition').innerHTML = '';
-    document.getElementById('part-of-speech').innerHTML = '';
-    document.getElementById('thisword').innerHTML = '';
-    document.getElementById('title').innerHTML = '';
-    document.getElementById('image').src= '';
-
-    // leftContent.innerHTML = "cleared";
-
+clearBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  const image = document.getElementById('image');
+  image.src = '';
+  inputTxt.value = '';
+  document.querySelectorAll('#inputTxt, #audio, #definition, #part-of-speech, #thisword, #title').forEach(elem => elem.innerHTML = '');
 });
+
 
 
 
