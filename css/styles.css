@@ -242,6 +242,8 @@ ul {
     align-items: center;
     gap:5%;
     height: 50px;
+    width: 100%;
+    justify-content: center;
 }
 
 .menubar ul li {
