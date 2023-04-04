@@ -285,7 +285,6 @@ ul {
 
 .dictionary-box .left-content {
     display: flex;
-    max-width: 50%;
     width: 30%;
     gap: 10px;
     padding-left: 10px;
@@ -304,7 +303,7 @@ ul {
 
 
 .dictionary-box .right-content {
-    max-width: 50%;
+    width: 50%;
     flex-direction: column;
     padding: 10px;
     gap: 10px;
@@ -343,20 +342,18 @@ ul {
 .dictionary-box .history {
     display: flex;
     flex-direction: column;
-    max-width: 30%;
+    width: 30%;
     background-color: #fff;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    width: 30%;
     padding: 10px;
 }
 
 .dictionary-box .weather-box {
     display: flex;
     flex-direction: column;
-    max-width: 60%;
     background-color: #525252;
-    width: 60%;
+    width: 50%;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -620,18 +617,12 @@ header i{
         font-style: italic;
     }
 @media only screen and (max-width: 1080px){
-
-    body {
-        overflow: visible;
-    }
-
     #content-area {
         flex-direction: column;
     }
 
     .dictionary-box {
         flex-direction: column;
-        height: fit-content;
         justify-content: center;
         align-items: center;
     }
@@ -640,16 +631,24 @@ header i{
         width: 100%;
     }
 
+    .dictionary-box .left-content .image-box #image {
+        padding: 10px;
+    }
+
     .dictionary-box .right-content {
         flex-direction: column;
         height: 100%;
-        width: 100%;
         align-items: center;
         width: 100%;
     }
 
     .dictionary-box .history {
         width: 100%;
+    }
+
+    .dictionary-box .weather-box {
+        width: 100%;
+        height: 150px;
     }
 
     @media only screen and (max-width: 970px){
