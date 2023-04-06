@@ -625,6 +625,37 @@ header ion-icon{
         font-size: 20px;
         font-style: italic;
     }
+
+    #footer-area .flex-container .flex_box .placeholder{
+        padding-top: 2rem;
+        text-align: center;
+        font-size: 0.8rem;
+        padding: 0;
+    }
+    
+      #footer-area .flex-container .flex_box .placeholder input[type="email"] {
+        flex-grow: 1;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 0.8rem;
+      }
+
+      #footer-area .flex-container .flex_box .placeholder button[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        margin: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 0.8rem;
+      }
+    
+      #footer-area .flex-container .flex_box .placeholder button[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
 @media only screen and (max-width: 1080px){
     #content-area {
         flex-direction: column;
