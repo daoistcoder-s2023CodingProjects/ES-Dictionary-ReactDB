@@ -274,7 +274,7 @@ ul {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 80vh;
+    height: 73vh;
     backdrop-filter: blur(10px);
     margin-top: 20px;
     border-radius: 10px;
@@ -374,7 +374,8 @@ ul {
   height: 100%;
 }
 .wrapper header{
-  text-align: center;
+    display: flex;
+    justify-content: center;
   font-size: 20px;
   font-weight: 500;
   color: #000000;
@@ -382,10 +383,10 @@ ul {
   align-items: center;
   border-bottom: 1px solid #ccc;
 }
-header i{
-  font-size: 0em;
+header ion-icon{
+  font-size: 1.5rem;
   cursor: pointer;
-  margin-right: 8px;
+  margin-right: 10px;
 }
 .wrapper.active header i{
   margin-left: 5px;
@@ -470,7 +471,7 @@ header i{
 
 .wrapper .weather-part{
   display: none;
-  margin: 30px 0 0;
+  margin: 15px 0 0;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -504,12 +505,12 @@ header i{
   font-size: 19px;
   padding: 0 20px;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   align-items: flex-start;
 }
-.location i{
-  font-size: 22px;
-  margin: 4px 5px 0 0;
+.location ion-icon{
+  font-size: 20px;
+  margin: 5px 5px 0 0;
 }
 .weather-part .bottom-details{
   display: flex;
@@ -524,9 +525,9 @@ header i{
   align-items: center;
   justify-content: center;
 }
-.column i{
-  color: #5DBBFF;
-  font-size: 40px;
+.column ion-icon{
+  color: #000000;
+  font-size: 20px;
 }
 .column.humidity{
   border-left: 1px solid #ccc;
@@ -627,12 +628,14 @@ header i{
 @media only screen and (max-width: 1080px){
     #content-area {
         flex-direction: column;
+        height: fit-content;
     }
 
     .dictionary-box {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: fit-content;
     }
 
     .dictionary-box .left-content {
@@ -656,7 +659,7 @@ header i{
 
     .dictionary-box .weather-box {
         width: 100%;
-        height: 400px;
+        height: 100%;
     }
 
     .wrapper header {
@@ -686,6 +689,10 @@ header i{
         margin: 0;
     }
 
+    .location ion-icon{
+        font-size: 30px;
+    }
+
     .bottom-details .column {
         padding: 12px 0;
     }
@@ -699,7 +706,7 @@ header i{
     }
 }
 
-@media only screen and (max-width: 970px){
+@media only screen and (max-width: 1000px){
         #footer-area .flex-container{
             flex-direction: column;
         }
