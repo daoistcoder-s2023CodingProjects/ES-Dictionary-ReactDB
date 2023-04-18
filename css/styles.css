@@ -677,6 +677,11 @@ header ion-icon{
         padding: 10px;
     }
 
+    .dictionary-box .left-content .image-box p{
+        display: flex;
+        justify-content: center;
+    }
+
     .dictionary-box .right-content {
         flex-direction: column;
         height: 100%;
@@ -743,10 +748,6 @@ header ion-icon{
         }
 }
 
-@media only screen and (max-width: 850px) {
-
-}
-
 @media only screen and (max-width: 800px) {
 
     #fixed-sidebar {
@@ -757,9 +758,7 @@ header ion-icon{
         margin-left: 0;
         width: 85%;
         transition: .5s;
-    }
-
-    
+    }   
 
     #content-area {
         width: 100%;
@@ -867,11 +866,12 @@ header ion-icon{
     }
 
     #footer-area .footer_copyright{
-        border-radius: 0.2rem;
+        margin-top: 80px;
     }
 
     #footer-area .footer_copyright p{
         font-size: 12px;
+    }
 }
 
 
@@ -907,6 +907,9 @@ header ion-icon{
         }    
     }
     @media only screen and (max-width: 375px){
+        #content-area {
+            padding-bottom: 37px;
+        }
         .menubar {
             font-size: 11px;
         }
@@ -917,7 +920,6 @@ header ion-icon{
     }
     
     @media only screen and (max-width: 370px) {
-        
         .menubar{
             font-size: 65%;
         }    
@@ -928,5 +930,4 @@ header ion-icon{
     .menubar{
         font-size: 60%;
     }    
-}
 }
