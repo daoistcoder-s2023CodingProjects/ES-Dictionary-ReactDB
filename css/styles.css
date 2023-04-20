@@ -572,6 +572,8 @@ header ion-icon{
     }
     
     #footer-area .flex-container .flex_box{
+    height: auto;
+    width: 100%;
     gap: 2rem;
     padding: 1rem 3rem;
     text-align: center;
@@ -627,6 +629,8 @@ header ion-icon{
     }
 
     #footer-area .flex-container .flex_box .placeholder{
+        position: flex;
+        flex-direction: column;
         padding-top: 2rem;
         text-align: center;
         font-size: 0.8rem;
