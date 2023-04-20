@@ -750,6 +750,9 @@ header ion-icon{
 
 @media only screen and (max-width: 800px) {
 
+    body{
+        min-height: 100%;
+    }
     #fixed-sidebar {
         margin-left: -350px;
     }
@@ -843,7 +846,8 @@ header ion-icon{
     }
 
     #footer-area{
-        height: 29.5rem;
+        height: 27rem;
+        padding-top: 2rem;
         
     }
 
@@ -866,7 +870,7 @@ header ion-icon{
     }
 
     #footer-area .footer_copyright{
-        margin-top: 80px;
+        margin: 0;
     }
 
     #footer-area .footer_copyright p{
