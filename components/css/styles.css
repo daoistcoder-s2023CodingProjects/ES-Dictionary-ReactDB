@@ -206,3 +206,62 @@ body {
     align-items: center;
     height: 100%;
 }
+
+
+
+
+/* MEDIA QUARIES */
+
+
+
+
+/* MOBILE VERSION */
+
+@media only screen and (max-width: 800px){
+/* LOGIN FORM */
+    .login-form .right-col{
+       display: none;
+    }
+    
+    .avatar h1{
+        color: black;
+    }
+    .login-form .left-col{
+        background-color: rgba(202, 190, 190, 0.925)
+    }
+    .footer {
+        max-width: 19rem;
+        min-width: 19rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    .login-form .left-col .form-links li:hover{
+        background-color: rgb(77, 77, 182);
+        
+    }
+    .login-form .left-col .form-links li a:hover{
+       color: rgb(255, 255, 255)
+        }
+
+        .login-form .left-col .placeholder .login input:hover{
+            background-color: rgb(77, 77, 182);
+            color: white;
+            cursor: pointer;
+        }
+/* REGISTRATION FORM */
+    
+    .container .registration-form{
+        background-color: rgb(197, 187, 187);
+    }
+
+   .container .registration-form .right-col{
+   display: none;}
+   
+
+   .container .registration-form .left-col .register_submit input:hover{
+    background-color: rgb(77, 77, 182);
+    color: white;
+    cursor: pointer;
+   }
+}
