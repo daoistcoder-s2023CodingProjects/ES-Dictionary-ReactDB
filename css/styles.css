@@ -572,7 +572,7 @@ header ion-icon{
 
     }
     
-    #footer-area .flex-container .flex_box{
+    /* #footer-area .flex-container .flex_box{
     height: auto;
     width: 100%;
     gap: 2rem;
@@ -615,21 +615,27 @@ header ion-icon{
     font-size: 1.3rem;
     padding-right: 0.3rem;
     
-    }
-    #footer-area .footer_copyright{
+    } */
+
+   .container .footer_copyright{
+        position: absolute;
+        bottom: 5px;
+        width: 100%;
         background-color: rgb(172, 168, 168);
         text-align: center;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        justify-content: center;
+        padding-top: 0.5rem;
+        padding-bottom: 0.2rem;
     }
     
-    #footer-area .footer_copyright p{
-        font-weight: 200;
-        font-size: 20px;
+    .container .footer_copyright p{
+        font-weight: 600;
+        font-size: 12px;
         font-style: italic;
     }
 
-    #footer-area .flex-container .flex_box .placeholder{
+
+    /* #footer-area .flex-container .flex_box .placeholder{
         position: flex;
         flex-direction: column;
         padding-top: 2rem;
@@ -660,7 +666,9 @@ header ion-icon{
     
       #footer-area .flex-container .flex_box .placeholder button[type="submit"]:hover {
         background-color: #3e8e41;
-      }
+      } */
+
+
 @media only screen and (max-width: 1080px){
     #content-area {
         flex-direction: column;
