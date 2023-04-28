@@ -263,11 +263,13 @@ toggleBtn.addEventListener('click', () => {
 // Hide words
 
 const searchInput = document.querySelector('#search-input');
-const hiddenText = document.querySelector('#hidden-text');
 const searchBtn = document.querySelector('#search-btn');
+const hiddenTexts = document.querySelectorAll('.hidden');
 
 function showHiddenText() {
-  hiddenText.classList.toggle('hidden', searchInput.value === '');
+  hiddenTexts.forEach((text) => {
+    text.classList.toggle('hidden', searchInput.value === '');
+  });
 }
 
 searchInput.addEventListener('keydown', (event) => {
@@ -276,12 +278,17 @@ searchInput.addEventListener('keydown', (event) => {
   }
 });
 
-searchBtn.addEventListener('click', () => {
+searchButton.addEventListener('click', () => {
   showHiddenText();
 });
+
 searchInput.addEventListener('input', () => {
-  hiddenText.classList.add('hidden');
+  hiddenTexts.forEach((text) => {
+    text.classList.add('hidden');
+  });
 });
+
+
 
 // Documentation here 
 

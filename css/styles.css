@@ -171,8 +171,9 @@ ul {
 }
 
 .hidden{
-    display: none;
+    display:none ;
 }
+
 .navbar {
     width: 100%;
     padding: 0;
