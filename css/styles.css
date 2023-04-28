@@ -170,6 +170,9 @@ ul {
     height: 60px;
 }
 
+.hidden{
+    display: none;
+}
 .navbar {
     width: 100%;
     padding: 0;
@@ -634,7 +637,9 @@ header ion-icon{
         font-style: italic;
     }
 
-
+    .footer_copyright_hidden{
+        display: none;
+    }
     /* #footer-area .flex-container .flex_box .placeholder{
         position: flex;
         flex-direction: column;
@@ -889,7 +894,10 @@ header ion-icon{
     #footer-area .footer_copyright p{
         font-size: 12px;
     }
-
+    
+    .footer_copyright_hidden{
+        display: flex;
+    }
 
 }
 

@@ -235,7 +235,53 @@ clearBtn.addEventListener('click', (e) => {
   document.querySelectorAll('#inputTxt, #audio, #definition, #part-of-speech, #thisword, #title').forEach(elem => elem.innerHTML = '');
 });
 
+// Change color 
+// const searchInput = document.getElementById('search-input');
+// const searchBtn = document.getElementById('search-btn');
+// const searchResult = document.getElementById('word');
 
+// searchBtn.addEventListener('click', () => {
+//   const searchTerm = searchInput.value;
+//   if (searchTerm.trim() !== '') {
+//     if (searchResult.textContent.includes(searchTerm)) {
+//       searchResult.style.color = 'green';
+//     } else {
+//             searchResult.style.color = 'red';
+//     }
+//   }
+// });
+
+// Hide footer in sidebar when toggle is active
+
+const toggleBtn = document.querySelector('.toggle');
+const textToRemove = document.querySelector('.footer_copyright');
+
+toggleBtn.addEventListener('click', () => {
+  textToRemove.classList.toggle('footer_copyright_hidden');
+});
+
+// Hide words
+
+const searchInput = document.querySelector('#search-input');
+const hiddenText = document.querySelector('#hidden-text');
+const searchBtn = document.querySelector('#search-btn');
+
+function showHiddenText() {
+  hiddenText.classList.toggle('hidden', searchInput.value === '');
+}
+
+searchInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    showHiddenText();
+  }
+});
+
+searchBtn.addEventListener('click', () => {
+  showHiddenText();
+});
+searchInput.addEventListener('input', () => {
+  hiddenText.classList.add('hidden');
+});
 
 // Documentation here 
 
