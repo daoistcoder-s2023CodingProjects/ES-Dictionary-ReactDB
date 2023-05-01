@@ -195,6 +195,12 @@ ul {
     cursor: pointer;
 }
 
+.toggle:hover {
+    background-color: grey;
+    color: white;
+    transition: 0.5s;
+}
+
 .search-box {
     position: relative;
     display: flex;
@@ -260,13 +266,19 @@ ul {
 }
 
 .menubar ul li a {
-    color:#000;
+    color: white;
     text-align: center;
     align-items: center;
     width: 100%;
     background-color: #525252;
-    padding: 5px 0 5px 0;
-    border-radius: 30px;
+    padding: 25px 0 25px 0;
+    border-radius: 12px;
+}
+
+.menubar ul li:hover a{
+    background-color: cyan;
+    color: black;
+    transition: .5s;
 }
 
 .menubar ul li a .icon {
@@ -279,7 +291,8 @@ ul {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 73vh;
+    min-height: 40vh;
+    max-height: fit-content;
     backdrop-filter: blur(10px);
     margin-top: 20px;
     border-radius: 10px;
@@ -346,6 +359,15 @@ ul {
     background-color: #868686;
     width: 100%;
 }
+
+.central-line{
+    width: 100%;
+}
+
+#audio{
+    min-width: 100% ;
+}
+
 
 .dictionary-box .history {
     display: flex;
@@ -623,13 +645,12 @@ header ion-icon{
 
    .container .footer_copyright{
         position: absolute;
-        bottom: 5px;
+        bottom: 0px;
         width: 100%;
         background-color: rgb(172, 168, 168);
         text-align: center;
         justify-content: center;
-        padding-top: 0.5rem;
-        padding-bottom: 0.2rem;
+        padding: 30px;
     }
     
     .container .footer_copyright p{
@@ -686,6 +707,7 @@ header ion-icon{
         justify-content: center;
         align-items: center;
         height: fit-content;
+
     }
 
     .dictionary-box .left-content {
@@ -759,6 +781,15 @@ header ion-icon{
     .humidity span {
         font-size: 20px;
     }
+
+    .history ul{
+        top: 0;
+        position: relative;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+            
+    }
 }
 
 @media only screen and (max-width: 1000px){
@@ -788,12 +819,13 @@ header ion-icon{
         display: flex;
         align-items: center;
         padding-top:30px;
-        transition: .5s;
+        transition: .2s;
+        
     }
 
     #content-area.active {
 
-        transition: all .5s;
+        transition: all .2s;
         max-width: calc(100% - 85%);
         gap: 10px;
         position: fixed;
@@ -811,8 +843,9 @@ header ion-icon{
 
     #content-area.active .menubar {
         width: fit-content;
-        padding:10px;
+        padding: 5px;
         margin-top: 5px;
+        
     }
 
     #content-area.active .toggle {
@@ -820,13 +853,16 @@ header ion-icon{
     }
 
     #content-area.active .menubar ul li {
+        display: flex;
         width: fit-content;
+        align-items: center;
+        justify-content: center;
     }
 
     #content-area.active .menubar ul {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
         height: fit-content;
         padding: 10px 0 10px;
     }
@@ -834,6 +870,7 @@ header ion-icon{
     #content-area.active .menubar ul li a {
         height: fit-content;
         max-width: max-content;
+        padding: 10px 5px 10px 5px;
     }
     #content-area.active .menubar ul li a .title {
         display: none;
@@ -883,7 +920,11 @@ header ion-icon{
         width: 100%;
         border-radius: 0.5rem;
     }
-
+    
+    .left-content , .right-content{
+        border-radius: 10px;
+    }
+    
     .dictionary-box .left-content .image-box p{
         color: white;
     }
