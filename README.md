@@ -49,7 +49,7 @@ We use Figma for wireframe. HTML, CSS, Javascript for the front-end and Github f
 
 ## **Contributors**
 
-1. Waren Gador - Group Admin All (focus on UX / UI), Planning and Helping Manipulate PostgresSQL
+1. Waren Gador - Front-end Developer , focus on UI / UX and Manipulating React JS 
 
 2. Emilio Tubao - Front-end Developer on Desktop, Tablet and Mobile version
 
