@@ -10,7 +10,7 @@ Group 2
 
 ES Dictionary is a Website dictionary that you can use thru Web, Tablet and Phone where everyone can browse different word meaning with images. Enjoy resources that provides definitions and part's of speech. Users can search for a particular word by typing it into a search bar. The project include voice pronunciations. User can also know the weather of any city by typing it in our weather area.
 
-Just visit the our project, just click here: [ES Dictionary](https://github.com/KodeGo-Bootcamp/ES-Dictionary).
+Just visit the our project, just click here: [ES-Dictionary](https://es-dictionary.netlify.app).
 
 Just search a word in Search Word area, then enjoy browsing in ES Dictionary where you can get word meaning and weather in just 1 click.
 
