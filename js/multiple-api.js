@@ -227,13 +227,28 @@ arrowBack.addEventListener("click", ()=>{
 const inputTxt = document.getElementById('search-input');
 const clearBtn = document.getElementById('clearBtn');
 
+
+//clear btn update
+const dictionaryTitles = document.querySelectorAll('#lefty a, #righty a');
+
 clearBtn.addEventListener('click', (e) => {
   e.preventDefault();
   const image = document.getElementById('image');
-  image.src = '';
-  inputTxt.value = '';
+
   document.querySelectorAll('#inputTxt, #audio, #definition, #part-of-speech, #thisword, #title').forEach(elem => elem.innerHTML = '');
+  inputTxt.value = '';
+  image.src = '';
+
+
+  //clear btn DOM update
+  dictionaryTitles.forEach(title => {
+    title.classList.add('hidden');
+  });
+
 });
+
+
+
 
 // Change color 
 // const searchInput = document.getElementById('search-input');
