@@ -19,27 +19,27 @@
     <div class="container">
         <div id="fixed-sidebar">
             <ul>
-                <li><a href="#">
+                <li><a href="#0">
                         <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
                         <span class="title"> ES Dictionary </span>
                     </a>
                 </li>
-                <li class="hovered"><a href="#">
+                <li class="hovered"><a href="#0">
                         <span class="icon"><ion-icon name="library"></ion-icon></span>
                         <span class="title"> Dashboard </span>
                     </a>
                 </li>
-                <li><a href="#">
+                <li><a href="#0">
                         <span class="icon"><ion-icon name="timer-outline"></ion-icon></span>
                         <span class="title"> History </span>
                     </a>
                 </li>
-                <li><a href="#">
+                <li><a href="#0">
                         <span class="icon"><ion-icon name="cog-outline"></ion-icon></span>
                         <span class="title"> Settings </span>
                     </a>
                 </li>
-                <li><a href="#">
+                <li><a href="#0">
                         <span class="icon"><ion-icon name="chatbubbles"></ion-icon></span>
                         <span class="title"> Support </span>
                     </a>
@@ -47,9 +47,8 @@
             </ul>
 
             <div class="footer_copyright">
-                <h2>
                     <p>&copy; Copyright 2023 Dashboard Kodego Group 2 &trade;</p>
-                </h2>
+        
             
             </div>      
         </div>
@@ -65,7 +64,7 @@
                     <ion-icon name="arrow-forward-circle-sharp" class="search-btn" id="search-btn"></ion-icon>
                 </div>
                 <div class="user-box">
-                    <img src= "images/giphy.webp" alt="es-dictionary-webp-gif" name="es-dictionary-book-animation-webp" >
+                    <img src= "images/giphy.webp" alt="es-dictionary-webp-gif">
                 </div>
             </div>
             <div class="menubar">
@@ -93,7 +92,7 @@
 
                 <div class="left-content" id="lefty">
                     <div class="image-box">
-                        <img id="image" src="" alt="" name="pexel-api-image-result">
+                        <img src="#0" alt="" id="image" >
                         <p><a class="hidden" aria-hidden="true">Word :</a><span id="title"></span></p>
                     </div>
                 </div>
@@ -130,20 +129,21 @@
 
                     <div class="wrapper">
                         <header><ion-icon id="back-icon" name="arrow-back-outline"></ion-icon>Weather</header>
-                        <section class="input-part">
+                        <div class="input-part">
                           <p class="info-txt"></p>
                           <div class="content">
                             <input type="text" spellcheck="false" placeholder="Enter city name" required>
                             <!-- WEATHER SECTION update by ROME -->
-                           <div class="toggle-switch-panel" style="padding:15px; display: flex; justify-content: space-around; align-items: center;">
+                            <div class="toggle-switch-panel" style="padding:15px; display: flex; justify-content: space-around; align-items: center;">
                             <p class="toggle-switch-txt">Allow Access Location</p>
                             <button id="toggle-switch"  aria-label="Toggle switch"></button>
 
+                            </div>
                            </div>
                            <!-- END of update -->
-                        </section>
-                        <section class="weather-part">
-                          <img src="" alt="Weather Icon" name="weather-api-icon">
+                        </div>
+                        <div class="weather-part">
+                          <img src="#0" alt="Weather Icon">
                           <div class="temp">
                             <span class="numb">_</span>
                             <span class="deg">°</span>C
@@ -172,7 +172,7 @@
                               </div>
                             </div>
                           </div>
-                        </section>
+                        </div>
                       </div>
 
                 </div>
@@ -180,41 +180,6 @@
 
             </div>
 
-            <!-- <div id="footer-area">
-                <div class="flex-container">
-                    <div class="flex_box"><img src="images/logo.png" alt="logo">
-                        <h2>ES Dictionary</h2>
-
-                        <a href="#"><ion-icon class="icons" name="logo-facebook"></ion-icon></a>
-                        <a href="#"><ion-icon class="icons" name="logo-discord"></ion-icon></a>
-                        <a href="#"><ion-icon class="icons" name="logo-linkedin"></ion-icon></a>
-                        <a href="#"><ion-icon class="icons" name="logo-github"></ion-icon></a>
-                    </div>
-                    <div class="flex_box">
-                        <h2>Contributors</h2>
-                        <ul>
-                            <li>Agaspar Adrian Latayada</li>
-                            <li>Jerome Ballena</li>
-                            <li>Emilio Tubao</li>
-                            <li>Bernard Opis</li>
-                            <li>Waren Gador</li>
-                            <li>Ryan Ayo</li>
-
-                        </ul>
-                    </div>
-                    <div class="flex_box">
-                        <div class="placeholder">
-                            <form>
-                              <label for="email">Email:</label>
-                              <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                              <div><button type="submit">Subscribe</button></div>
-                            </form>
-                          </div> 
-                    </div>
-                </div> -->
-
-
-     
                 
             </div>
 
@@ -222,14 +187,13 @@
 
 
 
-    </div>
-    </div>
+        
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" Cache-Control: no-cache
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" 
 ></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" Cache-Control: no-cache
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" 
 ></script>
-    <script src="js/multiple-api.js" Cache-Control: no-cache
+    <script src="js/multiple-api.js" 
 ></script>
 </body>
 
