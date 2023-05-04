@@ -123,13 +123,18 @@
                 <div class="weather-box">
 
                     <div class="wrapper">
-                        <header><ion-icon name="arrow-back-outline"></ion-icon>Weather</header>
+                        <header><ion-icon id="back-icon" name="arrow-back-outline"></ion-icon>Weather</header>
                         <section class="input-part">
                           <p class="info-txt"></p>
                           <div class="content">
                             <input type="text" spellcheck="false" placeholder="Enter city name" required>
-                           
-                          
+                            <!-- WEATHER SECTION update by ROME -->
+                           <div class="toggle-switch-panel" style="padding:15px; display: flex; justify-content: space-around; align-items: center;">
+                            <p class="toggle-switch-txt">Allow Access Location</p>
+                            <button id="toggle-switch" ></button>
+
+                           </div>
+                           <!-- END of update -->
                         </section>
                         <section class="weather-part">
                           <img src="" alt="Weather Icon">

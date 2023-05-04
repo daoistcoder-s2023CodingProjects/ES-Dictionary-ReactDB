@@ -120,15 +120,20 @@ function handleSearch() {
       document.getElementById('image').src = imageUrl;
     });
 
+
+}
+
+{
+
  //WEATHER by RYAN
- const wrapper = document.querySelector(".wrapper"),
+const wrapper = document.querySelector(".wrapper"),
 inputPart = document.querySelector(".input-part"),
 infoTxt = inputPart.querySelector(".info-txt"),
 inputField = inputPart.querySelector("input"),
 locationBtn = inputPart.querySelector("button"),
 weatherPart = wrapper.querySelector(".weather-part"),
 wIcon = weatherPart.querySelector("img"),
-arrowBack = wrapper.querySelector("header i");
+arrowBack = wrapper.querySelector("#back-icon");
 
 var api;
 
@@ -211,17 +216,35 @@ function weatherDetails(info){
         infoTxt.innerText = "";
         inputField.value = "";
         wrapper.classList.add("active");
+        arrowBack.classList.add("active");
+
     }
 }
 
 arrowBack.addEventListener("click", ()=>{
     wrapper.classList.remove("active");
+    arrowBack.classList.remove("active");
 });
+
+// toggle btn for Weather JS by ROME
+const toggleSwitch = document.querySelector('#toggle-switch');
+
+toggleSwitch.addEventListener('click', () => {
+  toggleSwitch.classList.toggle('on');
+});
+
+
 
 // End Of Weather JS
 
-
 }
+
+
+
+
+
+
+
 
 //clear btn  by ROME
 const inputTxt = document.getElementById('search-input');
