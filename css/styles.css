@@ -148,7 +148,7 @@ ul {
 #content-area {
     position: absolute;
     width: calc(100% - 320px);
-    height: 119vh;
+    height: 100vh;
     right:0;
     padding: 0px 15px 0 15px;
     transition: .5s;
