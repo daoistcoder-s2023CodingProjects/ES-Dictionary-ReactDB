@@ -5,13 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Description: Welcome to our Mini Project 2, the ES Dictionary.
-    This is our API-drivin mini web application built with CSS, Bootstrap, JavaScript and APIs to showcase our learnings from Kodego Bootcamp, and is deployed on Netlify for seamless performance, ES Dictionary is an development application where you can search any words that comes to your mind and search it using a dictionary and also provides the latest weather update today." 
-    content="Creator: WD47P Kodego Group2,">
-
-    <title>ES Dictionary</title>
-
     <link rel="stylesheet" href="css/styles.css">
+    <title>ES Dictionary </title>
 </head>
 
 <body>
@@ -46,8 +41,9 @@
             </ul>
 
             <div class="footer_copyright">
+                <h2>
                     <p>&copy; Copyright 2023 Dashboard Kodego Group 2 &trade;</p>
-        
+                </h2>
             
             </div>      
         </div>
@@ -63,23 +59,23 @@
                     <ion-icon name="arrow-forward-circle-sharp" class="search-btn" id="search-btn"></ion-icon>
                 </div>
                 <div class="user-box">
-                    <img src= "images/giphy.webp" alt="es-dictionary-webp-gif">
+                    <img src= "images/giphy.webp" alt="Dictionary GIF">
                 </div>
             </div>
             <div class="menubar">
                 <ul>
-                    <li><a href="#0">
+                    <li><a href="#">
                             <span class="icon"><ion-icon name="save"></ion-icon></span>
                             <span class="title"> Save Word </span>
 
                         </a>
                     </li>
-                    <li><a href="#0">
+                    <li><a href="#">
                             <span class="icon"><ion-icon name="add"></ion-icon></span>
                             <span class="title"> Add Word </span>
                         </a>
                     </li>
-                    <li id="clearBtn" ><a href="#0" target="_blank" rel="noopener noreferrer">
+                    <li id="clearBtn" ><a href="http://" target="_blank" rel="noopener noreferrer">
                             <span class="icon"><ion-icon name="trash-bin"></ion-icon></span>
                             <span class="title">Clear Field</span>
                         </a>
@@ -89,18 +85,18 @@
 
             <div class="dictionary-box">
 
-                <div class="left-content" id="lefty">
+                <div class="left-content">
                     <div class="image-box">
-                        <img src="#0" alt="" id="image" >
-                        <p><a class="hidden" aria-hidden="true" name="result">Word :</a><span id="title"></span></p>
+                        <img id="image" src="">
+                        <p><a class="hidden">Word :</a><span id="title"></span></p>
                     </div>
                 </div>
 
-                <div class="right-content" id="righty">
+                <div class="right-content">
 
                     <div class="top-line">
                         <div class="title">
-                            <p><a class="hidden" aria-hidden="true" name="phonetic">Phonetic :</a><span id="thisword"></span></p>
+                            <p><a href="#0" class="hidden">Phonetic :</a><span id="thisword"></span></p>
                         </div>
                     </div>
 
@@ -108,8 +104,8 @@
                         <div id="audio"></div>
                     </div>
                     <div class="bottom-line">
-                        <p><a class="hidden" aria-hidden="true" name="definitions">definition :</a><span id="definition"></span></p>
-                        <p><a class="hidden" aria-hidden="true" name="part-of-speech">Part's of Speech:</a><span id="part-of-speech"></span></p>
+                        <p><a href="#0" class="hidden">definition :</a><span id="definition"></span></p>
+                        <p><a href="#0" class="hidden">Part's of Speech:</a><span id="part-of-speech"></span></p>
                         <p id="pronoun"></p>
                         <p id="exam"></p>
                     </div>
@@ -127,22 +123,16 @@
                 <div class="weather-box">
 
                     <div class="wrapper">
-                        <header><ion-icon id="back-icon" name="arrow-back-outline"></ion-icon>Weather</header>
-                        <div class="input-part">
+                        <header><ion-icon name="arrow-back-outline"></ion-icon>Weather</header>
+                        <section class="input-part">
                           <p class="info-txt"></p>
                           <div class="content">
                             <input type="text" spellcheck="false" placeholder="Enter city name" required>
-                            <!-- WEATHER SECTION update by ROME -->
-                            <div class="toggle-switch-panel" style="padding:15px; display: flex; justify-content: space-around; align-items: center;">
-                            <p class="toggle-switch-txt">Allow Access Location</p>
-                            <button id="toggle-switch"  aria-label="Toggle switch"></button>
-
-                            </div>
-                           </div>
-                           <!-- END of update -->
-                        </div>
-                        <div class="weather-part">
-                          <img src="#0" alt="Weather Icon">
+                           
+                          
+                        </section>
+                        <section class="weather-part">
+                          <img src="" alt="Weather Icon">
                           <div class="temp">
                             <span class="numb">_</span>
                             <span class="deg">°</span>C
@@ -171,29 +161,26 @@
                               </div>
                             </div>
                           </div>
-                        </div>
+                        </section>
                       </div>
 
                 </div>
                 <!-- END OF WEATHER SECTION -->
 
             </div>
-
-                
+             
             </div>
 
         </div>
 
 
 
-        
+    </div>
+    </div>
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" 
-></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" 
-></script>
-    <script src="js/multiple-api.js" 
-></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" Cache-Control: no-cache></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" Cache-Control: no-cache></script>
+    <script src="js/multiple-api.js" Cache-Control: no-cache></script>
 </body>
 
 </html>
