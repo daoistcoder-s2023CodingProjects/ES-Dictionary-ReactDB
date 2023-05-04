@@ -47,6 +47,10 @@ We use Figma for wireframe. HTML, CSS, Javascript for the front-end and Github f
 >**Hosting**
 - ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
+- ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
+
+- ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+
 ## **Contributors**
 
 1. Waren Gador - Front-end Developer , focus on UI / UX and Manipulating React JS 
