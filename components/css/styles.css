@@ -26,9 +26,6 @@ body {
     justify-content: center;
     gap: 20px;
     background-color: rgb(61, 35, 10);
-    background-image: url('../images/background.svg');
-    background-size: cover;
-    background-attachment: fixed;
 }
 
 .container .login-form {
