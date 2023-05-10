@@ -1,13 +1,14 @@
 import React from "react";
-import Navbar from "./contents/Navbar";
+import Sidebar from "./contents/Sidebar";
 import Main from "./contents/Main";
 import './dashboard.css';
 
 export default function Dashboard2(){
     return (
         <div className="content">
-            <Navbar />
+            <Sidebar />
             <Main />
         </div>
     )
 }
+
