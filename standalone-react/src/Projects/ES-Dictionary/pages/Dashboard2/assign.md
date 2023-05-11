@@ -8,7 +8,7 @@ Tasks
 
 1. Initialize css and markup
 2. Mobile version
-3. React Animation Sidebar
+3. React Animation Sidebar (When toggle button is active, sidebar should be hidden or shown)
 4. Alpha testing
 
 
