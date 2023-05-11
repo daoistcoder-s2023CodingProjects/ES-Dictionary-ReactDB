@@ -1,17 +1,19 @@
 .container {
     min-width: 100%;
     max-width: fit-content;
-    height: 100%;
 }
 
 .sidebar,
 main {
-    height: 98%;
+    height: 100%;
     margin: 5px;
     background-color: #fff;
     border-radius: 5px;
 }
 
+.container .sidebar{
+    background-color: #7fffd4;
+}
 .sidebar {
     position: fixed;
     width: 320px;
@@ -192,7 +194,9 @@ main {
 
 .main-container{
     position: fixed;
-    max-height: 44rem;
+    max-height: 98%;
+    background-color: blue;
+    padding-bottom: 100px;
 }
 .fixed-container {
     position: fixed;
@@ -343,8 +347,8 @@ i {
 .content_dictionary{
     position: relative;
     width: 100%;
-    height: 33.7rem;
-    top: 21%;
+    height: 86.5%;
+    top: 150px;
     display: flex;
     z-index: 0;
 
@@ -406,8 +410,8 @@ i {
     height: 100%;
     right: 0;
     z-index: -2;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    /* overflow-y: scroll; */
+    /* overflow-x: hidden; */
     padding: 10px;
 }
 

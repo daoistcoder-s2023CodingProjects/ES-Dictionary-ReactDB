@@ -5,7 +5,7 @@ import './dashboard.css';
 
 export default function Dashboard2(){
     return (
-        <div className="content">
+        <div className="container">
             <Sidebar />
             <Main />
         </div>
