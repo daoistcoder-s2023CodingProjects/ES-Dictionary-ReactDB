@@ -1,11 +1,12 @@
 import React from "react";
 
-export default function Navbar() {
+export default function Navbar({click}) {
     return (
+        
         <div className="fixed-container">
           <nav className="navbar">
             <div className="left">
-              <a href="#0" className="menubtn">
+              <a href="#0" className="menubtn" onClick={click}>
                 <i className="fa-solid fa-bars"></i>
               </a>
               <div className="dashboard"><p>Dashboard</p></div>

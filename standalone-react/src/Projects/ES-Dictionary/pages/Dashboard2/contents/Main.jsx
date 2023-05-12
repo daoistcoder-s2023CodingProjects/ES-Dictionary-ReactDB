@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./Navbar";
+import Sidebar from "./Sidebar";
 
 export default function Main() {
+
+  const [showSidebar, setShowSidebar] = useState(false);
+  const [showMain, setShowMain] = useState(false);
+
+  const handleClick = () => {
+    setShowSidebar(!showSidebar);
+    setShowMain(!showMain);
+  }
   return (
-    <main className="main-container">
-      <Navbar />
+    <>
+    <Sidebar showSidebar={showSidebar}/>
+    <main className={showMain?"main-container collapse":"main-container"}>
+      <Navbar click={handleClick}/>
       <div className="content_dictionary">
         <div className="recent-search">
           <h2>Recent Search</h2>
@@ -76,5 +87,6 @@ export default function Main() {
         </div>
       </div>
     </main>
+    </>
   );
 }
