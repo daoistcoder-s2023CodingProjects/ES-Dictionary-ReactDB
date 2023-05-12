@@ -150,7 +150,14 @@ main {
 
 .weather-head {
     display: flex;
-    align-items: center
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff
+}
+
+.weather-head .temp {
+    font-size: 3rem;
+    font-weight: 500;
 }
 
 .weather-bottom img {
@@ -162,6 +169,7 @@ main {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    color: #fff;
     background-color: #6360607e
 }
 
@@ -173,9 +181,13 @@ main {
     margin: 2px
 }
 
-.box h4 {
+.box p {
     font-size: 15px;
     font-weight: 500
+}
+
+.weather-footer .title {
+    font-weight: 300;
 }
 
 .sidebar,
@@ -329,7 +341,7 @@ i {
     color: #000
 }
 
-.content {
+/* .content {
     /* position: relative;
     width: 100%;
     height: calc(100% - 20vh);
@@ -337,8 +349,8 @@ i {
     padding: 5px 0 0;
     display: flex;
     bottom: 5px;
-    z-index: 0; */
-}
+    z-index: 0;
+} */
 
 .content_dictionary{
     position: relative;
