@@ -3,10 +3,11 @@ import React from "react";
 import Main from "./contents/Main";
 import './dashboard.css';
 
+
 export default function Dashboard2(){
+    
     return (
         <div className="container">
-            {/* <Sidebar /> */}
             <Main />
         </div>
     )

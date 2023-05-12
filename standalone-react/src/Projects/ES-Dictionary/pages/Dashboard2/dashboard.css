@@ -481,17 +481,20 @@ i {
     }
 
     .main-container.collapse{
-        width: 15%;
+        width: 66%;
+
     }
 
     .sidebar {
         margin-left: -320px;
         transition: 0.5s;
+        width: 40%;
     }
 
     .sidebar.collapse{
         margin-left: 0;
-        width: 85%;
+        width: 320px;
+        align-items: center;
     }
 
     .fixed-container {
