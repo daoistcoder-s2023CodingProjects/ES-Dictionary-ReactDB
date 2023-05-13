@@ -3,6 +3,11 @@ import { useStateContext } from "../context/ContextProvider";
 import axiosClient from "../Axios-Client.js";
 import { useEffect } from "react";
 
+import Navbar from "../Projects/ES-Dictionary/pages/Dashboard2/contents/Navbar";
+import { Search } from "../Projects/ES-Dictionary/pages/Dashboard2/contents/Search";
+import Sidebar from "../Projects/ES-Dictionary/pages/Dashboard2/contents/Sidebar";
+
+
 
 export default function DefaultLayout() {
     const {user, token, setUser, setToken} = useStateContext();
@@ -21,30 +26,34 @@ export default function DefaultLayout() {
             })
     }
 
-    useEffect(() => {
-        axiosClient.get('/user')
-            .then(({data}) => {
-                setUser(data)
-            })
-      }, [])
+    // useEffect(() => {
+    //     axiosClient.get('/user')
+    //         .then(({data}) => {
+    //             setUser(data)
+    //         })
+    //   }, [])
     
 
     return (
        <div id="defaultLayout">
             <aside>
+                <Sidebar />
                 <Link to="/dashboard">Dashboard</Link>
                 <Link to="/users">Users</Link>
             </aside>
 
             <div className="content">
-                <header>
-                    <div>
-                        Header
-                    </div>
-                    <div>
-                        {user.name}
-                        <a href="#" onClick={onLogout} className="btn-logout">Logout</a>
-                    </div>
+                <header>   
+                                  
+                    <div className="fixed-container">
+                        <Navbar />
+                        <Search />
+                        <div>
+                           
+                            <a href="#" onClick={onLogout} className="btn-logout">Logout</a>
+                        </div>
+                    </div> 
+
                 </header>
 
                 <main>

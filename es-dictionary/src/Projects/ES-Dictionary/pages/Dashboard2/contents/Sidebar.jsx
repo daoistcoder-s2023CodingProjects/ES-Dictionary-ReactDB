@@ -1,7 +1,10 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import axios from "axios";
 
 
+
+import axiosClient from "../../../../../Axios-Client";
+import { useStateContext } from "../../../../../context/ContextProvider";
 
 export default function Sidebar({ showSidebar }) {
     const [data, setData] = useState({});
@@ -22,6 +25,18 @@ export default function Sidebar({ showSidebar }) {
             setLocation("");
         }
     };
+
+     const {user, setUser} = useStateContext();
+
+    useEffect(() => {
+        axiosClient.get('/user')
+            .then(({data}) => {
+                setUser(data)
+            })
+      }, [])
+
+
+
     return (
         <aside className={showSidebar?"sidebar collapse":"sidebar"}>
             <div className="top">
@@ -34,12 +49,12 @@ export default function Sidebar({ showSidebar }) {
                 <span className="user-icon">
                     <i className="fa-solid fa-user"></i>
                 </span>
-                <span className="title">Welcome user!</span>
+                <span className="title">Welcome   {user.name}</span>
             </div>
             <div className="list">
                 <ul className="side-links">
                     <li>
-                        <a href="#0" className="sidelist">
+                        <a href="/users" className="sidelist">
                             <span className="icons">
                                 <i className="fa-solid fa-list"></i>
                             </span>
@@ -55,7 +70,7 @@ export default function Sidebar({ showSidebar }) {
                         </a>
                     </li>
                     <li>
-                        <a href="#0" className="sidelist">
+                        <a href="/dashboard" className="sidelist">
                             <span className="icons">
                                 <i className="fa-solid fa-user"></i>
                             </span>

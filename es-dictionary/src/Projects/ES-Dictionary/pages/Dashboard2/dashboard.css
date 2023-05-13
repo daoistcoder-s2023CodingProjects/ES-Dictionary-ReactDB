@@ -356,11 +356,24 @@ i {
     z-index: 0;
 } */
 
+.content_statistics{
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 110%;
+    display: flex;
+    padding: 1rem 1rem;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+
+
 .content_dictionary{
     position: relative;
     width: 100%;
     height: 86.5%;
-    top: 150px;
+    top: 20px;
     display: flex;
     z-index: 0;
 
@@ -444,6 +457,12 @@ i {
 .img-apple{
     content: url('../Dashboard2/contents/dictionary/apple.jpg');
 }
+
+.img-stat{
+    content: url('../Dashboard1/contents/statTemplate.webp');
+}
+
+
 .upper .desc h1 {
     font-weight: 500;
     text-transform: uppercase;
