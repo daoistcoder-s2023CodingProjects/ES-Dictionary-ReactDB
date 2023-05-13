@@ -9,15 +9,9 @@ import './index.css'
 
 const Page = (
   <React.StrictMode>
-<<<<<<< HEAD:es-dictionary/src/index.jsx
-
-      <Dashboard2/>
-
-=======
     <BrowserRouter>
       <Dashboard1/>
     </BrowserRouter>
->>>>>>> a2b41d4c7dd2c632ba8e6baf4301f93fec0e9ffa:standalone-react/src/index.jsx
   </React.StrictMode>
   
 
