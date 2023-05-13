@@ -1,37 +1,46 @@
 import {Navigate, createBrowserRouter} from "react-router-dom";
-import Dashboard2 from "./Projects/ES-Dictionary/pages/Dashboard2/Dashboard2.jsx";
-
+import Login from "./views/Login.jsx";
+import Signup from "./views/Signup.jsx";
+import Users from "./views/Users.jsx";
+import NotFound from "./views/NotFound.jsx";
+import DefaultLayout from "./components/DefaultLayout.jsx";
+import GuestLayout from "./components/GuestLayout.jsx";
+import Dashboard from "./views/DashBoard.jsx";
 
 
 const router = createBrowserRouter( [
     {
         path: '/',
-        element: <Dashboard2 />,
+        element: <DefaultLayout />,
         children:[
             {
                 path: '/',
-                element: <Navigate to="/dashboard2" />
+                element: <Navigate to="/users" />
             },
             {
-                path: '/dashboard2',
-                element: <Dashboard2 />
+                path: '/dashboard',
+                element: <Dashboard />
+            },
+            {
+                path: '/users',
+                element: <Users />
             },
         ]
     },
-    // {
-    //     path: '/',
-    //     element: <Dashboard2 />,
-    //     children: [
-    //         {
-    //             path: '/login',
-    //             element: <Dashboard2 />
-    //         },
-    //         {
-    //             path: '/signup',
-    //             element: <Dashboard2 />
-    //         },
-    //     ]
-    // },
+    {
+        path: '/',
+        element: <GuestLayout />,
+        children: [
+            {
+                path: '/login',
+                element: <Login />
+            },
+            {
+                path: '/signup',
+                element: <Signup />
+            },
+        ]
+    },
     {
         path: '*',
         element: <NotFound />

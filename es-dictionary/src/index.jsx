@@ -10,7 +10,7 @@ import './index.css'
 const Page = (
   <React.StrictMode>
     <BrowserRouter>
-      <Dashboard1/>
+      <Dashboard2/>
     </BrowserRouter>
   </React.StrictMode>
   
