@@ -480,9 +480,21 @@ i {
         transition: 0.5s
     }
 
+    .main-container.collapse{
+        width: 66%;
+
+    }
+
     .sidebar {
         margin-left: -320px;
         transition: 0.5s;
+        width: 40%;
+    }
+
+    .sidebar.collapse{
+        margin-left: 0;
+        width: 320px;
+        align-items: center;
     }
 
     .fixed-container {

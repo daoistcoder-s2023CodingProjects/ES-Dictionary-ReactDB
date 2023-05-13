@@ -1,12 +1,17 @@
 import { React, useState } from "react";
 import axios from "axios";
 
-export default function Sidebar() {
+
+
+export default function Sidebar({ showSidebar }) {
     const [data, setData] = useState({});
     const [city, setLocation] = useState("");
     const Weatherkey = "36b90ff89a52d49f85627b18ea50ed81";
+   
+    // ` sided/back/grave quote used when calling in react const url
+    // ${} act as a catchable value of a constant variable
 
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${Weatherkey}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${Weatherkey}`; 
 
     const searchLocation = (event) => {
         if (event.key === "Enter") {
@@ -18,7 +23,7 @@ export default function Sidebar() {
         }
     };
     return (
-        <aside className="sidebar">
+        <aside className={showSidebar?"sidebar collapse":"sidebar"}>
             <div className="top">
                 <span className="icons">
                     <i className="fa-solid fa-book-open"></i>
@@ -126,3 +131,4 @@ export default function Sidebar() {
         </aside>
     );
 }
+

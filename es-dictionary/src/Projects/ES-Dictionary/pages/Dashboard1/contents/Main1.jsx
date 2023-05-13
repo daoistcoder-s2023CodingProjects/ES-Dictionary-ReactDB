@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import Navbar from "./Navbar";
-import Sidebar from "./Sidebar";
-import { Content_dictionary } from "./Main2_components";
-import { Search } from "./Search";
+import Navbar from "../../Dashboard2/contents/Navbar";
+import Sidebar from "../../Dashboard2/contents/Sidebar";
+import { Menu } from "./components/Menu";
+import Statistics from "./components/Statistics";
 
-export default function Main() {
+
+export default function Main1() {
         
   const [showSidebar, setShowSidebar] = useState(false);
   const [showMain, setShowMain] = useState(false);
@@ -21,9 +22,9 @@ export default function Main() {
     <main className={showMain?"main-container collapse":"main-container"}>
     <div className="fixed-container">
       <Navbar click={handleClick}/>
-      <Search />
+      <Menu /> 
      </div> 
-      <Content_dictionary/>
+      <Statistics/>
     </main>
     </>
   );

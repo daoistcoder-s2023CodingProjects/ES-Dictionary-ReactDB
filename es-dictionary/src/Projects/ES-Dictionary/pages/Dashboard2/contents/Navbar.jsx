@@ -1,11 +1,13 @@
 import React from "react";
 
-export default function Navbar() {
-    return (
-        <div className="fixed-container">
+export default function Navbar({click}) {
+  
+
+  return (
+    <>
           <nav className="navbar">
             <div className="left">
-              <a href="#0" className="menubtn">
+              <a href="#0" className="menubtn" onClick={click}>
                 <i className="fa-solid fa-bars"></i>
               </a>
               <div className="dashboard"><p>Dashboard</p></div>
@@ -17,28 +19,6 @@ export default function Navbar() {
               </a>
             </div>
           </nav>
-          <div className="search-bar">
-            <div className="left-search">
-              <input
-                type="text"
-                name="search"
-                id="search"
-                placeholder="Search.."
-              />
-              <a href="#0"><i className="fa-solid fa-magnifying-glass"></i></a>
-            </div>
-            <div className="right-search">
-              <div className="box">
-                <a href="#0"><i className="fa-solid fa-floppy-disk"></i></a>
-              </div>
-              <div className="box">
-                <a href="#0"><i className="fa-solid fa-trash"></i></a>
-              </div>
-              <div className="box">
-                <a href="#0"><i className="fa-solid fa-broom"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
+ </>
     )
 }
