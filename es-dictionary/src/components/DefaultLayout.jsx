@@ -1,6 +1,6 @@
 import { Link, Navigate, Outlet } from "react-router-dom";
 import { useStateContext } from "../context/ContextProvider";
-import axiosClient from "../axios-client.js";
+import axiosClient from "../Axios-Client.js";
 import { useEffect } from "react";
 
 

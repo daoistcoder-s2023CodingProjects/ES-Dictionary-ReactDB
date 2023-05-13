@@ -5,7 +5,7 @@ import Users from "./views/Users.jsx";
 import NotFound from "./views/NotFound.jsx";
 import DefaultLayout from "./components/DefaultLayout.jsx";
 import GuestLayout from "./components/GuestLayout.jsx";
-import Dashboard from "./views/DashBoard.jsx";
+import Dashboard from "./views/Dashboard.jsx";
 
 
 const router = createBrowserRouter( [

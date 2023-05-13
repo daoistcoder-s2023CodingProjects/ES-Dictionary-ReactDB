@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import axiosClient from "../axios-client.js";
+import axiosClient from "../Axios-Client.js";
 import { useRef, useState } from "react";
 import { useStateContext } from "../context/ContextProvider";
 

@@ -42,11 +42,11 @@ input:focus {
 .btn-delete {
     font-family: "Roboto", sans-serif;
     outline: 0;
-    background: #5b08a7;
+    background: #3aa55a;
     border: 0;
     text-decoration: none;
     padding: 15px;
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 16px;
     -webkit-transition: all 0.3 ease;
     transition: all 0.3 ease;
@@ -85,7 +85,7 @@ input:focus {
 .btn:hover,
 .btn:active,
 .btn:focus {
-    background: #5b08a7;
+    background: #044d228e;
 }
 
 .text-center {
@@ -171,7 +171,7 @@ table > tbody > tr > td {
 }
 
 .login-signup-form .form .message a {
-    color: #5b08a7;
+    color: #08a76a;
     text-decoration: none;
 }
 
