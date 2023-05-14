@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from "react";
 import axios from "axios";
 
-
+import { Link } from "react-router-dom";
 
 import axiosClient from "../../../../../Axios-Client";
 import { useStateContext } from "../../../../../context/ContextProvider";
@@ -54,12 +54,12 @@ export default function Sidebar({ showSidebar }) {
             <div className="list">
                 <ul className="side-links">
                     <li>
-                        <a href="/users" className="sidelist">
+                        <Link to="/users" className="sidelist">
                             <span className="icons">
                                 <i className="fa-solid fa-list"></i>
                             </span>
                             <span className="title">Dashboard</span>
-                        </a>
+                        </Link>
                     </li>
                     <li>
                         <a href="#0" className="sidelist">
@@ -70,12 +70,12 @@ export default function Sidebar({ showSidebar }) {
                         </a>
                     </li>
                     <li>
-                        <a href="/dashboard" className="sidelist">
+                        <Link to="/dashboard" className="sidelist">
                             <span className="icons">
-                                <i className="fa-solid fa-user"></i>
+                                 <i className="fa-solid fa-user"></i>
                             </span>
                             <span className="title">Account</span>
-                        </a>
+                        </Link>
                     </li>
                     <li>
                         <a href="#0" className="sidelist">
