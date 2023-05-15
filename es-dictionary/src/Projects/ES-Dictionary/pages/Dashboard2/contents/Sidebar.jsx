@@ -49,7 +49,7 @@ export default function Sidebar({ showSidebar }) {
                 <span className="user-icon">
                     <i className="fa-solid fa-user"></i>
                 </span>
-                <span className="title">Welcome   {user.name}</span>
+                <span className="title">Welcome  <strong>{user.name}</strong></span>
             </div>
             <div className="list">
                 <ul className="side-links">

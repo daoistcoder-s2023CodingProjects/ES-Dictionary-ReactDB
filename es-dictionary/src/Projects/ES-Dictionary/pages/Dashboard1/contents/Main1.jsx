@@ -3,7 +3,6 @@ import Navbar from "../../Dashboard2/contents/Navbar";
 import Sidebar from "../../Dashboard2/contents/Sidebar";
 import { Menu } from "./components/Menu";
 import Statistics from "./components/Statistics";
-import './statTemplate.webp'
 
 
 export default function Main1() {
@@ -19,13 +18,13 @@ export default function Main1() {
 
   return (
     <>
-    <main>
+    <Sidebar showSidebar={showSidebar}/>
+    <main className={showMain?"main-container collapse":"main-container"}>
     <div className="fixed-container">
-      <div className="content_statistics">
-      <img className="img-stat" alt="statTest" />
-      </div>
-    </div> 
-     
+      <Navbar click={handleClick}/>
+      <Menu /> 
+     </div> 
+      <Statistics/>
     </main>
     </>
   );

@@ -43,22 +43,23 @@ export default function DefaultLayout() {
             </aside>
 
             <div className="content">
-                <header>   
-                                  
+
+                <header>                                  
                     <div className="fixed-container">
+                        
                         <Navbar />
                         <Search />
-                        <div>
-                           
+
+                        <div>                          
                             <a href="#" onClick={onLogout} className="btn-logout">Logout</a>
                         </div>
                     </div> 
-
                 </header>
 
                 <main>
                     <Outlet />
                 </main>
+                
             </div>
        </div>
     )
