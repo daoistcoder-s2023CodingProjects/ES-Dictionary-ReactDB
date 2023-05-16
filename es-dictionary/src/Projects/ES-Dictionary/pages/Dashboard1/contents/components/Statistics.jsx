@@ -6,7 +6,7 @@ export default function Statistics(){
     <div className="content_statistics">
     <div className="user_details">
     <div className="user_background"></div>
-    <li className="background"><a class= "user_icon" href="#"><i class="fa-regular fa-user"></i></a></li>
+    <li className="background"><a class= "user_icon" href="#"><i class="fa-regular fa-user "></i></a></li>
           <div className="user">
             <h2>User Details</h2>
             <ul>

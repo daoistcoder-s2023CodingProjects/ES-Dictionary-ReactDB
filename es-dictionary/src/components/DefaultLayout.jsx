@@ -10,12 +10,12 @@ import Sidebar from "../Projects/ES-Dictionary/pages/Dashboard2/contents/Sidebar
 
 
 export default function DefaultLayout() {
-    const {user, token, setUser, setToken} = useStateContext();
+    const { user, token, setUser, setToken } = useStateContext();
 
     if (!token) {
         return <Navigate to="/login" />
     }
-    
+
     const onLogout = (ev) => {
         ev.preventDefault()
 
@@ -32,35 +32,20 @@ export default function DefaultLayout() {
     //             setUser(data)
     //         })
     //   }, [])
-    
+
 
     return (
-       <div id="defaultLayout">
-            <aside>
-                <Sidebar />
-                <Link to="/dashboard">Dashboard</Link>
-                <Link to="/users">Users</Link>
-            </aside>
+        <>
+            <a href="#" onClick={onLogout} className="btn-logout">Logout</a>
+            <Sidebar />
+            <main className="main-container">
+            <div className="fixed-container">
+             <Navbar />
+             <Outlet />
+             </div>
+            </main>
 
-            <div className="content">
 
-                <header>                                  
-                    <div className="fixed-container">
-                        
-                        <Navbar />
-                        <Search />
-
-                        <div>                          
-                            <a href="#" onClick={onLogout} className="btn-logout">Logout</a>
-                        </div>
-                    </div> 
-                </header>
-
-                <main>
-                    <Outlet />
-                </main>
-                
-            </div>
-       </div>
+        </>
     )
 }

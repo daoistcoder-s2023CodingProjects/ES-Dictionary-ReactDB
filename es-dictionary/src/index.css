@@ -72,8 +72,11 @@ input:focus {
 }
 
 .btn-logout {
+    position: absolute;
+    top: 6.8rem;
+    left: 1rem;
     text-decoration: none;
-    padding: 0.25rem 1.25rem;
+    padding: 1rem 1rem;
     color: #333232;
     background-color: #a7a5a5 ;
     transition: all 0.3s;
@@ -81,6 +84,7 @@ input:focus {
     border-style: solid;
     border-width: 1px;
     border-color: #706d6d;
+    z-index: 999;
 }
 .btn-logout:hover {
     background-color: #7fffd4;
