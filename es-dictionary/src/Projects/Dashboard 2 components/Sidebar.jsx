@@ -1,20 +1,18 @@
-import { React, useState, useEffect } from "react";
+import { React, useEffect, useState } from "react";
 import axios from "axios";
-
 import { Link } from "react-router-dom";
+import { useStateContext } from "../../context/ContextProvider";
+import axiosClient from "../../Axios-Client";
 
-import axiosClient from "../../../../../Axios-Client";
-import { useStateContext } from "../../../../../context/ContextProvider";
-
-export default function Sidebar({ showSidebar }) {
-    const [data, setData] = useState({});
+export default function Sidebar({ click , showSidebar }) {
+    const [data, setData] = useState('');
     const [city, setLocation] = useState("");
     const Weatherkey = "36b90ff89a52d49f85627b18ea50ed81";
-   
+
     // ` sided/back/grave quote used when calling in react const url
     // ${} act as a catchable value of a constant variable
 
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${Weatherkey}`; 
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${Weatherkey}`;
 
     const searchLocation = (event) => {
         if (event.key === "Enter") {
@@ -26,67 +24,67 @@ export default function Sidebar({ showSidebar }) {
         }
     };
 
-     const {user, setUser} = useStateContext();
+    const { user, setUser } = useStateContext();
 
     useEffect(() => {
         axiosClient.get('/user')
-            .then(({data}) => {
+            .then(({ data }) => {
                 setUser(data)
             })
-      }, [])
+    }, []);
 
-
+    const onLogout = (ev) => {
+        ev.preventDefault()
+        axiosClient.post('/logout')
+            .then(() => {
+                setUser({})
+                setToken(null)
+            });
+    };
 
     return (
         <aside className={showSidebar?"sidebar collapse":"sidebar"}>
-            <div className="top">
-                <span className="icons">
-                    <i className="fa-solid fa-book-open"></i>
-                </span>
-                <span className="title">ES Dictionary</span>
+            <div className="side_header">
+                <i className="fa-solid fa-book"></i>
+                <h1>ES-Dictionary</h1>
             </div>
-            <div className="user-tab">
-                <span className="user-icon">
+
+            <div className="side_user">
+                <div className="user_info">
                     <i className="fa-solid fa-user"></i>
-                </span>
-                <span className="title">Welcome  <strong>{user.name}</strong></span>
+                    <h2>Welcome <strong>{user.name}</strong></h2>
+                </div>
+                <div className="logout_btn">
+                    <a href="#0" onClick={click}>Logout</a>
+                </div>
             </div>
-            <div className="list">
-                <ul className="side-links">
-                    <li>
-                        <Link to="/users" className="sidelist">
-                            <span className="icons">
-                                <i className="fa-solid fa-list"></i>
-                            </span>
-                            <span className="title">Dashboard</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <a href="#0" className="sidelist">
-                            <span className="icons">
-                                <i className="fa-solid fa-book"></i>
-                            </span>
-                            <span className="title">Dictionary</span>
-                        </a>
-                    </li>
-                    <li>
-                        <Link to="/dashboard" className="sidelist">
-                            <span className="icons">
-                                 <i className="fa-solid fa-user"></i>
-                            </span>
-                            <span className="title">Account</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <a href="#0" className="sidelist">
-                            <span className="icons">
-                                <i className="fa-solid fa-ticket"></i>
-                            </span>
-                            <span className="title">Support</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+
+            <ul className="side_menu_list">
+                <li>
+                    <Link to="/users" className="sidelist">
+                        <span className="icon"><i className="fa-solid fa-list"></i></span>
+                        <span className="title">Dashboard</span>
+                    </Link>
+                </li>
+                <li>
+                    <a href="">
+                        <span className="icon"><i className="fa-solid fa-book"></i></span>
+                        <span className="title">Dictionary</span>
+                    </a>
+                </li>
+                <li>
+                    <Link to="/dashboard" className="sidelist">
+                        <span className="icon"><i className="fa-solid fa-user"></i></span>
+                        <span className="title">Account</span>
+                    </Link>
+                </li>
+                <li>
+                    <a href="">
+                        <span className="icon"><i className="fa-solid fa-ticket"></i></span>
+                        <span className="title">Support</span>
+                    </a>
+                </li>
+            </ul>
             <div className="weather-bottom">
                 <input
                     type="text"
@@ -124,13 +122,13 @@ export default function Sidebar({ showSidebar }) {
                                     {data.main.feels_like.toFixed()}°C
                                 </p>
                             ) : null}
-                            <p className="title">Feels like</p>
+                            <p className="title">{data.main && `Feels like`}</p>
                         </div>
                         <div className="humidity box">
                             {data.main ? (
                                 <p className="bold">{data.main.humidity}%</p>
                             ) : null}
-                            <p className="title">Humidity</p>
+                            <p className="title">{data.main && `Humidity`}</p>
                         </div>
                         <div className="windspeed box">
                             {data.wind ? (
@@ -138,12 +136,15 @@ export default function Sidebar({ showSidebar }) {
                                     {data.wind.speed.toFixed()} MPH
                                 </p>
                             ) : null}
-                            <p className="title">Windspeed</p>
+                            <p className="title">{data.main && `Windspeed`}</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </aside>
-    );
-}
 
+            <div className="side_footer">
+                <h4>ES-Dictionary V.1</h4>
+            </div>
+        </aside>
+    )
+}

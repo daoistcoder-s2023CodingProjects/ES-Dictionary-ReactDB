@@ -1,1 +1,0 @@
-in this pages folder, you can put all your pages to your project.

@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Menu() {
+export default function Menu() {
     return (
             <div className="Menu">
                   <div className="flexbox">

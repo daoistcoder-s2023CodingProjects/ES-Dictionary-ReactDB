@@ -1,15 +1,22 @@
 import { Link, Navigate, Outlet } from "react-router-dom";
 import { useStateContext } from "../context/ContextProvider";
 import axiosClient from "../Axios-Client.js";
-import { useEffect } from "react";
-
-import Navbar from "../Projects/ES-Dictionary/pages/Dashboard2/contents/Navbar";
-import { Search } from "../Projects/ES-Dictionary/pages/Dashboard2/contents/Search";
-import Sidebar from "../Projects/ES-Dictionary/pages/Dashboard2/contents/Sidebar";
-
+import { useEffect, useState } from "react";
+import '../Projects/Dashboard 2 components/Dictionary.css'
+import Navbar from "../Projects/Dashboard 2 components/Navbar";
+import Sidebar from "../Projects/Dashboard 2 components/Sidebar";
 
 
 export default function DefaultLayout() {
+
+    const [showSidebar, setShowSidebar] = useState(false);
+    const [showMain, setShowMain] = useState(false);
+
+    function handleClick(){
+        setShowSidebar(!showSidebar);
+        setShowMain(!showMain);
+      }
+
     const { user, token, setUser, setToken } = useStateContext();
 
     if (!token) {
@@ -26,21 +33,12 @@ export default function DefaultLayout() {
             })
     }
 
-    // useEffect(() => {
-    //     axiosClient.get('/user')
-    //         .then(({data}) => {
-    //             setUser(data)
-    //         })
-    //   }, [])
-
-
     return (
         <>
-            <a href="#" onClick={onLogout} className="btn-logout">Logout</a>
-            <Sidebar />
-            <main className="main-container">
+            <Sidebar click={onLogout} showSidebar={showSidebar}/>
+            <main className={showMain?"main-container collapse":"main-container"}>
             <div className="fixed-container">
-             <Navbar />
+            <Navbar click={handleClick}/>
              <Outlet />
              </div>
             </main>

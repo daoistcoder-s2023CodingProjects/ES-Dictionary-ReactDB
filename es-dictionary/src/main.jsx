@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-
 import './index.css'
+import "../src/Projects/Dashboard 2 components/Dictionary.css"
 import { RouterProvider } from 'react-router-dom'
 import router from './router.jsx'
 import { ContextProvider } from './context/ContextProvider.jsx'
