@@ -315,20 +315,22 @@ i {
 display: flex;
 justify-content: space-between;
 position: relative;
-padding: 10px;
+padding: 5px;
 border-radius: 50px;
 background-color: white;
 right: 0;
 width: 40%;
+align-items: center;
 }
 
 .dictionary_container form input[type=text]{
+    margin-top: 12px;
     border: none;
-    border-bottom: 1px solid rgb(194, 191, 191);
+    padding: 0;
     width: 100%;
-    padding:5px 5px 5px;
     margin-left: 10px;
     outline: none;
+    padding-bottom: 0;
 }
 
 .dictionary_container .search_btn{
