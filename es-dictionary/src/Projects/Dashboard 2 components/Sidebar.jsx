@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { useStateContext } from "../../context/ContextProvider";
 import axiosClient from "../../Axios-Client";
 
-export default function Sidebar({ click , showSidebar }) {
+export default function Sidebar({ click , showSidebar , showSideHeader , showUserInfo
+     , showLogoutBtn , showSideUser , showSideMenuList , showTitle , showSideFooter , showSlideSidebar}) {
     const [data, setData] = useState('');
     const [city, setLocation] = useState("");
     const Weatherkey = "36b90ff89a52d49f85627b18ea50ed81";
@@ -43,45 +44,45 @@ export default function Sidebar({ click , showSidebar }) {
     };
 
     return (
-        <aside className={showSidebar?"sidebar collapse":"sidebar"}>
-            <div className="side_header">
+        <aside className={showSidebar?"sidebar2":"sidebar"} id={showSlideSidebar?"slidesidebar2":"slidesidebar"}>
+            <div className={showSideHeader?"side_header2":"side_header"}>
                 <i className="fa-solid fa-book"></i>
                 <h1>ES-Dictionary</h1>
             </div>
 
-            <div className="side_user">
-                <div className="user_info">
+            <div className={showSideUser?"side_user2":"side_user"}>
+                <div className={showUserInfo?"user_info2":"user_info"}>
                     <i className="fa-solid fa-user"></i>
                     <h2>Welcome <strong>{user.name}</strong></h2>
                 </div>
-                <div className="logout_btn">
+                <div className={showLogoutBtn?"logout_btn2":"logout_btn"}>
                     <a href="#0" onClick={click}>Logout</a>
                 </div>
             </div>
 
-            <ul className="side_menu_list">
+            <ul className={showSideMenuList?"side_menu_list2":"side_menu_list"}>
                 <li>
                     <Link to="/users" className="sidelist">
                         <span className="icon"><i className="fa-solid fa-list"></i></span>
-                        <span className="title">Dashboard</span>
+                        <span className={showTitle?"title2":"title"}>Dashboard</span>
                     </Link>
                 </li>
                 <li>
-                    <a href="">
+                    <a href=""className="sidelist">
                         <span className="icon"><i className="fa-solid fa-book"></i></span>
-                        <span className="title">Dictionary</span>
+                        <span className={showTitle?"title2":"title"}>Dictionary</span>
                     </a>
                 </li>
                 <li>
                     <Link to="/dashboard" className="sidelist">
                         <span className="icon"><i className="fa-solid fa-user"></i></span>
-                        <span className="title">Account</span>
+                        <span className={showTitle?"title2":"title"}>Account</span>
                     </Link>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="" className="sidelist">
                         <span className="icon"><i className="fa-solid fa-ticket"></i></span>
-                        <span className="title">Support</span>
+                        <span className={showTitle?"title2":"title"}>Support</span>
                     </a>
                 </li>
             </ul>
@@ -142,7 +143,7 @@ export default function Sidebar({ click , showSidebar }) {
                 </div>
             </div>
 
-            <div className="side_footer">
+            <div className={showSideFooter?"side_footer2":"side_footer"}>
                 <h4>ES-Dictionary V.1</h4>
             </div>
         </aside>
