@@ -16,9 +16,9 @@ export default function Main() {
     return(
         <div>
         <Sidebar showSidebar={showSidebar}/>
-        <main className={showMain?"main-container collapse":"main-container"}>
+        <main className={showMain?"main-container2":"main-container"} id={showMain?"main-container2":"main-container"}>
         <div className="fixed-container">
-        <Navbar click={handleClick}/>
+        <Navbar click={handleClick} />
         </div>
         <Dictionary />
         </main>

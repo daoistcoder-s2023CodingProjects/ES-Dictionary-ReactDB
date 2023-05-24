@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-export default function Dictionary(){
+export default function Dictionary({showRecentSearch}){
     
   const [TermSearch, setSearchTerm] = useState('')
   const [Speech, setPartOfSpeech] = useState('')
@@ -69,7 +69,7 @@ export default function Dictionary(){
         </div>  
         )}
       </div>
-      <div className="recent_search">
+      <div className={showRecentSearch?"recent_search2":"recent_search"}>
         <h3 className="recent_title">Recent Search</h3>
         <ul className="recent_list">
           <li>item</li>

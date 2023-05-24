@@ -5,16 +5,52 @@ import { useEffect, useState } from "react";
 import '../Projects/Dashboard 2 components/Dictionary.css'
 import Navbar from "../Projects/Dashboard 2 components/Navbar";
 import Sidebar from "../Projects/Dashboard 2 components/Sidebar";
+import Dictionary from "../Projects/Dashboard 2 components/Dictionary";
 
 
 export default function DefaultLayout() {
-
-    const [showSidebar, setShowSidebar] = useState(false);
-    const [showMain, setShowMain] = useState(false);
+    const [showSidebar, setShowSidebar] = useState(false); //
+    const [showMain, setShowMain] = useState(false); //
+    const [showSun, setShowSun] = useState(false); //
+    const [showMoon, setShowMoon] = useState(false); //
+    const [showContainer, setShowContainer] = useState(false); //
+    const [showSideHeader, setShowSideHeader] = useState(false);  //
+    const [showUserInfo, setShowUserInfo] = useState(false); //
+    const [showLogoutBtn, setShowLogoutBtn] = useState(false);//
+    const [showSideUser, setShowSideUser] = useState(false)//
+    const [showSideMenuList, setShowSideMenuList] = useState(false);//
+    const [showTitle, SetshowTitle] = useState(false);//
+    const [showSideFooter, SetshowSideFooter] = useState(false);//
+    const [showLeft, SetshowLeft] = useState(false); //
+    const [showRight, SetshowRight] = useState(false);//
+    const [showUpload, SetshowUpload] = useState(false);//
+    const [showRecentSearch, SetshowRecentSearch] = useState(false);
 
     function handleClick(){
         setShowSidebar(!showSidebar);
         setShowMain(!showMain);
+        setShowSun(!showSun);
+        setShowMoon(!showMoon);
+        setShowContainer(!showContainer);
+        setShowSideHeader(!showSideHeader);
+        setShowUserInfo(!showUserInfo);
+        setShowLogoutBtn(!showLogoutBtn);
+        setShowSideUser(!showSideUser);
+        setShowSideMenuList(!showSideMenuList);
+        SetshowTitle(!showTitle);
+        SetshowSideFooter(!showSideFooter);
+        SetshowLeft(!showLeft);
+        SetshowRight(!showRight);
+        SetshowUpload(!showUpload);
+        SetshowRecentSearch(!showRecentSearch);
+      }
+
+      const [showSlideSidebar, setShowSlideSidebar] = useState(false)
+      const [showSlideMain, setShowSlideMain] = useState(false)
+      
+      function handleClick2(){
+        setShowSlideSidebar(!showSlideSidebar);
+        setShowSlideMain(!showSlideMain);
       }
 
     const { user, token, setUser, setToken } = useStateContext();
@@ -34,16 +70,17 @@ export default function DefaultLayout() {
     }
 
     return (
-        <>
-            <Sidebar click={onLogout} showSidebar={showSidebar}/>
-            <main className={showMain?"main-container collapse":"main-container"}>
+        <div className={showContainer?"container2":"container"} >
+            <Sidebar click={onLogout} showSidebar={showSidebar} showSideHeader={showSideHeader} showUserInfo={showUserInfo}
+            showLogoutBtn={showLogoutBtn} showSideUser={showSideUser} showSideMenuList={showSideMenuList} 
+            showTitle={showTitle} showSideFooter={showSideFooter} showSlideSidebar={showSlideSidebar}/>
+            <main className={showMain?"main-container2":"main-container"} id={showSlideMain?"slidemain2":"slidemain"}>
             <div className="fixed-container">
-            <Navbar click={handleClick}/>
-             <Outlet />
+            <Navbar  color={handleClick} click={handleClick2} showSun={showSun} showMoon={showMoon}
+            showLeft={showLeft} showRight={showRight} showUpload={showUpload}/>
+             <Dictionary showRecentSearch={showRecentSearch}/>
              </div>
             </main>
-
-
-        </>
+        </div>
     )
 }
