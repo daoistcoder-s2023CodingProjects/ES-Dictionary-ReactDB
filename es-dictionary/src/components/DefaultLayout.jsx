@@ -45,13 +45,28 @@ export default function DefaultLayout() {
         SetshowRecentSearch(!showRecentSearch);
       }
 
-      const [showSlideSidebar, setShowSlideSidebar] = useState(false)
-      const [showSlideMain, setShowSlideMain] = useState(false)
-      
+
+      const [showSlideSidebar, setShowSlideSidebar] = useState(window.innerWidth >= 1006);
+      const [showSlideMain, setShowSlideMain] = useState(window.innerWidth >= 1006);
+
       function handleClick2(){
         setShowSlideSidebar(!showSlideSidebar);
         setShowSlideMain(!showSlideMain);
       }
+      
+      useEffect(() => {
+        const handleResize = () => {
+            setShowSlideSidebar(window.innerWidth >= 1006);
+            setShowSlideMain(window.innerWidth >= 1006);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+      }, []);
+
 
     const { user, token, setUser, setToken } = useStateContext();
 
@@ -74,7 +89,7 @@ export default function DefaultLayout() {
             <Sidebar click={onLogout} showSidebar={showSidebar} showSideHeader={showSideHeader} showUserInfo={showUserInfo}
             showLogoutBtn={showLogoutBtn} showSideUser={showSideUser} showSideMenuList={showSideMenuList} 
             showTitle={showTitle} showSideFooter={showSideFooter} showSlideSidebar={showSlideSidebar}/>
-            <main className={showMain?"main-container2":"main-container"} id={showSlideMain?"slidemain2":"slidemain"}>
+            <main className={showMain?"main-container2":"main-container"} id={showSlideMain ? 'slidemain2' : 'slidemain'}>
             <div className="fixed-container">
             <Navbar  color={handleClick} click={handleClick2} showSun={showSun} showMoon={showMoon}
             showLeft={showLeft} showRight={showRight} showUpload={showUpload}/>
