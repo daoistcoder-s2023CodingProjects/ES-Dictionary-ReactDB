@@ -78,7 +78,7 @@ export default function DefaultLayout() {
             <div className="fixed-container">
             <Navbar  color={handleClick} click={handleClick2} showSun={showSun} showMoon={showMoon}
             showLeft={showLeft} showRight={showRight} showUpload={showUpload}/>
-             <Dictionary showRecentSearch={showRecentSearch}/>
+             <Outlet showRecentSearch={showRecentSearch}/>
              </div>
             </main>
         </div>
