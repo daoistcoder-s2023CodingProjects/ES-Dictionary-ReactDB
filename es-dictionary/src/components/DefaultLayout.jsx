@@ -6,7 +6,7 @@ import '../Projects/Dashboard 2 components/Dictionary.css'
 import Navbar from "../Projects/Dashboard 2 components/Navbar";
 import Sidebar from "../Projects/Dashboard 2 components/Sidebar";
 import Dictionary from "../Projects/Dashboard 2 components/Dictionary";
-
+import Users from "../views/Users"
 
 export default function DefaultLayout() {
     const [showSidebar, setShowSidebar] = useState(false); //
@@ -93,7 +93,7 @@ export default function DefaultLayout() {
             <div className="fixed-container">
             <Navbar  color={handleClick} click={handleClick2} showSun={showSun} showMoon={showMoon}
             showLeft={showLeft} showRight={showRight} showUpload={showUpload}/>
-             <Outlet showRecentSearch={showRecentSearch}/>
+             <Users showRecentSearch={showRecentSearch}/>
              </div>
             </main>
         </div>
