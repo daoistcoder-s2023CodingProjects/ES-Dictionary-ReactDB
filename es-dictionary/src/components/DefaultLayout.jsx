@@ -7,6 +7,7 @@ import Navbar from "../Projects/Dashboard 2 components/Navbar";
 import Sidebar from "../Projects/Dashboard 2 components/Sidebar";
 import Dictionary from "../Projects/Dashboard 2 components/Dictionary";
 import Users from "../views/Users"
+import Dashboard from "../views/Dashboard"
 
 export default function DefaultLayout() {
     const [showSidebar, setShowSidebar] = useState(false); //
@@ -84,16 +85,26 @@ export default function DefaultLayout() {
             })
     }
 
+    const [showComponent1, setShowComponent1] = useState(true);
+
+    const handleButtonClick = (buttonType) => {
+        if (buttonType === "button1" && !showComponent1) {
+          setShowComponent1(true);
+        } else if (buttonType === "button2" && showComponent1) {
+          setShowComponent1(false);
+        }
+      };
+
     return (
         <div className={showContainer?"container2":"container"} >
             <Sidebar click={onLogout} showSidebar={showSidebar} showSideHeader={showSideHeader} showUserInfo={showUserInfo}
             showLogoutBtn={showLogoutBtn} showSideUser={showSideUser} showSideMenuList={showSideMenuList} 
-            showTitle={showTitle} showSideFooter={showSideFooter} showSlideSidebar={showSlideSidebar}/>
+            showTitle={showTitle} showSideFooter={showSideFooter} showSlideSidebar={showSlideSidebar} onButtonClick={handleButtonClick}/>
             <main className={showMain?"main-container2":"main-container"} id={showSlideMain ? 'slidemain2' : 'slidemain'}>
             <div className="fixed-container">
             <Navbar  color={handleClick} click={handleClick2} showSun={showSun} showMoon={showMoon}
             showLeft={showLeft} showRight={showRight} showUpload={showUpload}/>
-             <Users showRecentSearch={showRecentSearch}/>
+             {showComponent1 ? <Users showRecentSearch={showRecentSearch}/> : <Dashboard />}
              </div>
             </main>
         </div>
