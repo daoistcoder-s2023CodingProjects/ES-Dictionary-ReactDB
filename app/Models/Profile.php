@@ -7,15 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Profile extends Model
 {
-    use HasFactory;
+	use HasFactory;
 
-        /**
-         * Get the user that owns the Profile
-         *
-         * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-         */
-        public function user()
-        {
-            return $this->belongsTo(User::class);
-        }
+	/**
+	 * Get the user that owns the Profile
+	 *
+	 * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+	 */
+	public function user()
+	{
+		return $this->belongsTo(User::class);
+	}
 }
