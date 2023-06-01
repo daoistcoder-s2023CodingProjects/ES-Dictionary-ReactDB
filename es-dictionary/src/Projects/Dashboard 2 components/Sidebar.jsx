@@ -5,7 +5,7 @@ import { useStateContext } from "../../context/ContextProvider";
 import axiosClient from "../../Axios-Client";
 
 export default function Sidebar({ click , showSidebar , showSideHeader , showUserInfo
-     , showLogoutBtn , showSideUser , showSideMenuList , showTitle , showSideFooter , showSlideSidebar}) {
+     , showLogoutBtn , showSideUser , showSideMenuList , showTitle , showSideFooter , showSlideSidebar , onButtonClick}) {
     const [data, setData] = useState('');
     const [city, setLocation] = useState("");
     const Weatherkey = "36b90ff89a52d49f85627b18ea50ed81";
@@ -43,6 +43,10 @@ export default function Sidebar({ click , showSidebar , showSideHeader , showUse
             });
     };
 
+    const handleClick = (buttonType) => {
+        onButtonClick(buttonType);
+      };
+
     return (
         <aside className={showSidebar?"sidebar2":"sidebar"} id={showSlideSidebar?"slidesidebar2":"slidesidebar"}>
             <div className={showSideHeader?"side_header2":"side_header"}>
@@ -62,7 +66,7 @@ export default function Sidebar({ click , showSidebar , showSideHeader , showUse
 
             <ul className={showSideMenuList?"side_menu_list2":"side_menu_list"}>
                 <li>
-                    <Link to="/users" className="sidelist">
+                    <Link to="/users" className="sidelist" onClick={() => handleClick("button1")}>
                         <span className="icon"><i className="fa-solid fa-list"></i></span>
                         <span className={showTitle?"title2":"title"}>Dashboard</span>
                     </Link>
@@ -74,7 +78,7 @@ export default function Sidebar({ click , showSidebar , showSideHeader , showUse
                     </a>
                 </li>
                 <li>
-                    <Link to="/dashboard" className="sidelist">
+                    <Link to="/dashboard" className="sidelist" onClick={() => handleClick("button2")}>
                         <span className="icon"><i className="fa-solid fa-user"></i></span>
                         <span className={showTitle?"title2":"title"}>Account</span>
                     </Link>
