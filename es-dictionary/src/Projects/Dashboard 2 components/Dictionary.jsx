@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useOutletContext } from "react-router-dom";
 import axios from "axios";
 
-export default function Dictionary({showRecentSearch}){
+export default function Dictionary(){
     
+  const [showRecentSearch, SetshowRecentSearch] = useOutletContext();
   const [TermSearch, setSearchTerm] = useState('')
   const [Speech, setPartOfSpeech] = useState('')
   const [phonetics, setPhonetics] = useState('')
@@ -72,14 +74,6 @@ export default function Dictionary({showRecentSearch}){
       <div className={showRecentSearch?"recent_search2":"recent_search"}>
         <h3 className="recent_title">Recent Search</h3>
         <ul className="recent_list">
-          <li>item</li>
-          <li>item</li>
-          <li>item</li>
-          <li>item</li>
-          <li>item</li>
-          <li>item</li>
-          <li>item</li>
-          <li>item</li>
           <li>item</li>
           <li>item</li>
           <li>item</li>

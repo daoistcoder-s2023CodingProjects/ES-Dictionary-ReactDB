@@ -1,4 +1,4 @@
-import { Link, Navigate, Outlet } from "react-router-dom";
+import { Link, Navigate, Outlet, useOutletContext } from "react-router-dom";
 import { useStateContext } from "../context/ContextProvider";
 import axiosClient from "../Axios-Client.js";
 import { useEffect, useState } from "react";
@@ -95,7 +95,7 @@ export default function DefaultLayout() {
                         showRight={showRight}
                         showUpload={showUpload}
                     />
-                    <Outlet context={[,]} />
+                    <Outlet context={[showRecentSearch, SetshowRecentSearch]} />
                 </div>
             </main>
         </div>
