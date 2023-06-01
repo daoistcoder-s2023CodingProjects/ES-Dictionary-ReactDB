@@ -4,9 +4,19 @@ import { Link } from "react-router-dom";
 import { useStateContext } from "../../context/ContextProvider";
 import axiosClient from "../../Axios-Client";
 
-export default function Sidebar({ click , showSidebar , showSideHeader , showUserInfo
-     , showLogoutBtn , showSideUser , showSideMenuList , showTitle , showSideFooter , showSlideSidebar}) {
-    const [data, setData] = useState('');
+export default function Sidebar({
+    click,
+    showSidebar,
+    showSideHeader,
+    showUserInfo,
+    showLogoutBtn,
+    showSideUser,
+    showSideMenuList,
+    showTitle,
+    showSideFooter,
+    showSlideSidebar,
+}) {
+    const [data, setData] = useState("");
     const [city, setLocation] = useState("");
     const Weatherkey = "36b90ff89a52d49f85627b18ea50ed81";
 
@@ -28,62 +38,87 @@ export default function Sidebar({ click , showSidebar , showSideHeader , showUse
     const { user, setUser } = useStateContext();
 
     useEffect(() => {
-        axiosClient.get('/user')
-            .then(({ data }) => {
-                setUser(data)
-            })
+        axiosClient.get("/user").then(({ data }) => {
+            setUser(data);
+        });
     }, []);
 
     const onLogout = (ev) => {
-        ev.preventDefault()
-        axiosClient.post('/logout')
-            .then(() => {
-                setUser({})
-                setToken(null)
-            });
+        ev.preventDefault();
+        axiosClient.post("/logout").then(() => {
+            setUser({});
+            setToken(null);
+        });
     };
 
     return (
-        <aside className={showSidebar?"sidebar2":"sidebar"} id={showSlideSidebar?"slidesidebar2":"slidesidebar"}>
-            <div className={showSideHeader?"side_header2":"side_header"}>
+        <aside
+            className={showSidebar ? "sidebar2" : "sidebar"}
+            id={showSlideSidebar ? "slidesidebar2" : "slidesidebar"}
+        >
+            <div className={showSideHeader ? "side_header2" : "side_header"}>
                 <i className="fa-solid fa-book"></i>
                 <h1>ES-Dictionary</h1>
             </div>
 
-            <div className={showSideUser?"side_user2":"side_user"}>
-                <div className={showUserInfo?"user_info2":"user_info"}>
+            <div className={showSideUser ? "side_user2" : "side_user"}>
+                <div className={showUserInfo ? "user_info2" : "user_info"}>
                     <i className="fa-solid fa-user"></i>
-                    <h2>Welcome <strong>{user.name}</strong></h2>
+                    <h2>
+                        Welcome <strong>{user.name}</strong>
+                    </h2>
                 </div>
-                <div className={showLogoutBtn?"logout_btn2":"logout_btn"}>
-                    <a href="#0" onClick={click}>Logout</a>
+                <div className={showLogoutBtn ? "logout_btn2" : "logout_btn"}>
+                    <a href="#0" onClick={click}>
+                        Logout
+                    </a>
                 </div>
             </div>
 
-            <ul className={showSideMenuList?"side_menu_list2":"side_menu_list"}>
+            <ul
+                className={
+                    showSideMenuList ? "side_menu_list2" : "side_menu_list"
+                }
+            >
                 <li>
-                    <Link to="/users" className="sidelist">
-                        <span className="icon"><i className="fa-solid fa-list"></i></span>
-                        <span className={showTitle?"title2":"title"}>Dashboard</span>
+                    <Link to="/dashboard" className="sidelist">
+                        <span className="icon">
+                            <i className="fa-solid fa-list"></i>
+                        </span>
+                        <span className={showTitle ? "title2" : "title"}>
+                            Dashboard
+                        </span>
                     </Link>
                 </li>
                 <li>
-                    <a href=""className="sidelist">
-                        <span className="icon"><i className="fa-solid fa-book"></i></span>
-                        <span className={showTitle?"title2":"title"}>Dictionary</span>
-                    </a>
+                    <Link to="/dictionary" className="sidelist">
+                        <span className="icon">
+                            <i className="fa-solid fa-book"></i>
+                        </span>
+                        <span className={showTitle ? "title2" : "title"}>
+                            Dictionary
+                        </span>
+                    </Link>
                 </li>
                 <li>
                     <Link to="/dashboard" className="sidelist">
-                        <span className="icon"><i className="fa-solid fa-user"></i></span>
-                        <span className={showTitle?"title2":"title"}>Account</span>
+                        <span className="icon">
+                            <i className="fa-solid fa-user"></i>
+                        </span>
+                        <span className={showTitle ? "title2" : "title"}>
+                            Account
+                        </span>
                     </Link>
                 </li>
                 <li>
-                    <a href="" className="sidelist">
-                        <span className="icon"><i className="fa-solid fa-ticket"></i></span>
-                        <span className={showTitle?"title2":"title"}>Support</span>
-                    </a>
+                    <Link to="/dashboard" className="sidelist">
+                        <span className="icon">
+                            <i className="fa-solid fa-ticket"></i>
+                        </span>
+                        <span className={showTitle ? "title2" : "title"}>
+                            Support
+                        </span>
+                    </Link>
                 </li>
             </ul>
             <div className="weather-bottom">
@@ -143,9 +178,9 @@ export default function Sidebar({ click , showSidebar , showSideHeader , showUse
                 </div>
             </div>
 
-            <div className={showSideFooter?"side_footer2":"side_footer"}>
+            <div className={showSideFooter ? "side_footer2" : "side_footer"}>
                 <h4>ES-Dictionary V.1</h4>
             </div>
         </aside>
-    )
+    );
 }

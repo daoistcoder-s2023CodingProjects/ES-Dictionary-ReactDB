@@ -6,6 +6,7 @@ import NotFound from "./views/NotFound.jsx";
 import DefaultLayout from "./components/DefaultLayout.jsx";
 import GuestLayout from "./components/GuestLayout.jsx";
 import Dashboard from "./views/Dashboard.jsx";
+import Dictionary from "./Projects/Dashboard 2 components/Dictionary.jsx";
 
 
 const router = createBrowserRouter( [
@@ -15,15 +16,15 @@ const router = createBrowserRouter( [
         children:[
             {
                 path: '/',
-                element: <Navigate to="/users" />
+                element: <Navigate to="/dictionary" />
             },
             {
                 path: '/dashboard',
                 element: <Dashboard />
             },
             {
-                path: '/users',
-                element: <Users />
+                path: '/dictionary',
+                element: <Dictionary />
             },
         ]
     },
