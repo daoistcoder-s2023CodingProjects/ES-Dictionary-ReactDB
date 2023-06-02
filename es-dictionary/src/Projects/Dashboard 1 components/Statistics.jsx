@@ -1,7 +1,17 @@
 import { useState, useRef, useEffect } from "react";
+import { useStateContext } from "../../context/ContextProvider";
+import axiosClient from "../../Axios-Client";
 import "./content_statistics.css";
 
 export default function Statistics() {
+    const { user, setUser } = useStateContext();
+
+    useEffect(() => {
+        axiosClient.get("/user").then(({ data }) => {
+            setUser(data);
+        });
+    }, []);
+
     const [profilePic, setProfilePic] = useState(
         () => localStorage.getItem("profilePic") || null
     );
@@ -9,7 +19,7 @@ export default function Statistics() {
         const savedUserDetails = localStorage.getItem("userDetails");
         return savedUserDetails
             ? JSON.parse(savedUserDetails)
-            : { name: "", age: "", email: "" };
+            : { name: "", email: "" };
     });
     const [isEditing, setIsEditing] = useState(false);
     const fileInputRef = useRef(null);
@@ -67,17 +77,7 @@ export default function Statistics() {
                             type="text"
                             id="name"
                             name="name"
-                            value={userDetails.name}
-                            onChange={handleInputChange}
-                        />
-                    </div>
-                    <div className="input-group">
-                        <label htmlFor="age">Age:</label>
-                        <input
-                            type="number"
-                            id="age"
-                            name="age"
-                            value={userDetails.age}
+                            value={user.name}
                             onChange={handleInputChange}
                         />
                     </div>
@@ -87,7 +87,7 @@ export default function Statistics() {
                             type="email"
                             id="email"
                             name="email"
-                            value={userDetails.email}
+                            value={user.email}
                             onChange={handleInputChange}
                         />
                     </div>
@@ -107,15 +107,11 @@ export default function Statistics() {
                 <div className="details">
                     <div className="detail">
                         <span className="label">Name:</span>
-                        <span>{userDetails.name}</span>
-                    </div>
-                    <div className="detail">
-                        <span className="label">Age:</span>
-                        <span>{userDetails.age}</span>
+                        <span>{user.name}</span>
                     </div>
                     <div className="detail">
                         <span className="label">Email:</span>
-                        <span>{userDetails.email}</span>
+                        <span>{user.email}</span>
                     </div>
                     <div className="button-group">
                         <button

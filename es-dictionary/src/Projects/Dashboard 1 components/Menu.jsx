@@ -1,6 +1,9 @@
-import React from "react";
+import {React, useEffect} from "react";
+import { useStateContext } from "../../context/ContextProvider";
+import axiosClient from "../../Axios-Client";
 
 export default function Menu() {
+
     return (
         <div className="Menu">
             <div className="flexbox">
