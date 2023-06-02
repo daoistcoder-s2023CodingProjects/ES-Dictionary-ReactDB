@@ -108,9 +108,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #e8edda;
-    padding: 20px 10px 20px 10px;
-    border: 2px solid rgba(128, 128, 128, 0.404);
+    background-color: #c5ccad;
+    padding: 0.1rem 0.1rem;
+
 }
 
 .profile-image {
@@ -213,7 +213,7 @@
 .user-details {
     border: 1px solid #bcbcbc;
     border-radius: 4px;
-    padding: 10px;
+    padding: 3rem 0.5rem;
     max-width: 100%;
     margin: 0 auto;
     background-color: #e8edda;
@@ -228,11 +228,11 @@
 
 .user-details ul {
     list-style-type: none;
-    padding: 0;
+    padding: 1rem;
 }
 
 .user-details li {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 .user-details button {
