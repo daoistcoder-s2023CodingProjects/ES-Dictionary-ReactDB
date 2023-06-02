@@ -1,8 +1,8 @@
 :root {
-    --light-container: #fff2cc;
-    --light-boxes-aside: #ffd966;
-    --light-minibox: #f4b183;
-    --light-text: #dfa67b;
+    --light-container: #f5f3e5;
+    --light-boxes-aside: #c5ccad;
+    --light-minibox: #e8edda;
+    --light-text: #d7d7d7;
     --light-normal-text: black;
 
     --Dark-container: #1a120b;
@@ -555,7 +555,7 @@
 }
 
 #sun {
-    color: var(--light-minibox);
+    color: #8b8841;
     width: 50px;
 }
 

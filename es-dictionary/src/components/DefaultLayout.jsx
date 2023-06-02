@@ -5,7 +5,8 @@ import { useEffect, useState } from "react";
 import "../Projects/Dashboard 2 components/Dictionary.css";
 import Navbar from "../Projects/Dashboard 2 components/Navbar";
 import Sidebar from "../Projects/Dashboard 2 components/Sidebar";
-import Dictionary from "../Projects/Dashboard 2 components/Dictionary";
+import Dashboard from "../views/Dashboard"
+import Statistics from "../Projects/Dashboard 1 components/Statistics";
 
 export default function DefaultLayout() {
     const [showSidebar, setShowSidebar] = useState(false); //
