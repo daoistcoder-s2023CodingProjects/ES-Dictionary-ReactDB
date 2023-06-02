@@ -40,7 +40,7 @@
 
 .user {
     position: relative;
-    background-color: bisque;
+    background-color: #c5ccad;
     height: 59.4vh;
 }
 
@@ -65,7 +65,7 @@
     right: 1px;
     height: 76vh;
     width: 90%;
-    background-color: rgb(95, 155, 155);
+    background-color: #e8edda;
 }
 
 .data_statistics h2 {
@@ -96,7 +96,7 @@
     height: 70vh;
     display: flex;
     flex-direction: column;
-    background-color: #a4adb4;
+    background-color: #c5ccad;
     padding: 12px;
 }
 
@@ -108,9 +108,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #999999;
+    background-color: #e8edda;;
     padding: 20px 10px 20px 10px;
-    border: 1px solid #bcbcbc;
+    border: 2px solid #gray ;
 }
 
 .profile-image {
@@ -127,7 +127,7 @@
 
 .choose-button {
     padding: 10px 15px;
-    background-color: #465046;
+    background-color: #e8edda;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -169,7 +169,7 @@
 .edit-button,
 .save-button {
     padding: 10px 20px;
-    background-color: #4a4a4a;
+    background-color: #e8edda;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -216,7 +216,7 @@
     padding: 10px;
     max-width: 100%;
     margin: 0 auto;
-    background-color: #8c8c8c;
+    background-color: #e8edda;
 }
 
 .user-details h2 {
